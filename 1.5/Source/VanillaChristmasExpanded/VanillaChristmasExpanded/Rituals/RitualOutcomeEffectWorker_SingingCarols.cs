@@ -63,6 +63,8 @@ namespace VanillaChristmasExpanded
                     {
                         Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent), pawn.PositionHeld, pawn.Map);
                         thingToMake.SetFaction(pawn.Faction);
+                        QualityCategory qualityPresent = QualityUtility.GenerateQualityRandomEqualChance();
+                        thingToMake.TryGetComp<CompQuality>().SetQuality(qualityPresent, null);
                     }
                 }
 
