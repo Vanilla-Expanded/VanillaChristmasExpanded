@@ -6,8 +6,8 @@
 		<description>A small, decorative tree with a number of festive lights that light up an area. People need light to move and work at full speed.</description>
 		<designationHotKey>Misc11</designationHotKey>
 		<graphicData>
-			<texPath>Things/Building/ChristmasTree</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/StandingFestiveTree/StandingFestiveTree</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.6, 0.3)</volume>
 				<offset>(0,0,-0.1)</offset>

@@ -5,7 +5,7 @@
 		<label>festive cracker</label>
 		<description>A delicious preparation of cocoa seeds ground together with sugar and vanilla. Very pleasurable to eat, but not very nutritious.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/Chocolate</texPath>
+			<texPath>Things/Item/FestiveCracker</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<drawSize>0.88</drawSize>
 		</graphicData>

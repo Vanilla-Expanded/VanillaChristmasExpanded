@@ -296,6 +296,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building\FestivePresent.cs" />
+    <Compile Include="DefExtensions\PresentGraphicsByQuality.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="IngestionOutcomeDoers\IngestionOutcomeDoer_Confetti.cs" />

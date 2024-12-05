@@ -8,9 +8,11 @@
 		<thingClass>VanillaChristmasExpanded.FestivePresent</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<selectable>true</selectable>
 		<fillPercent>0.3</fillPercent>
 		<pathCost>50</pathCost>
+		<uiIconPath>Things/Building/Misc/FestivePresent_NormalA</uiIconPath>
 		<size>(1,1)</size>
 		<clearBuildingArea>false</clearBuildingArea>
 		<rotatable>false</rotatable>
@@ -19,13 +21,85 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/Gift</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>UI/Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
+		<tickerType>Normal</tickerType>
 		<comps><li><compClass>CompQuality</compClass></li>
 		 
 		</comps>
+		<modExtensions>
+			<li Class="VanillaChristmasExpanded.PresentGraphicsByQuality">
+				<graphics>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_AwfulA</li>
+							<li>Things/Building/Misc/FestivePresent_AwfulB</li>
+							<li>Things/Building/Misc/FestivePresent_AwfulC</li>
+							<li>Things/Building/Misc/FestivePresent_AwfulD</li>
+						</texturePaths>
+						<quality>Awful</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_PoorA</li>
+							<li>Things/Building/Misc/FestivePresent_PoorB</li>
+							<li>Things/Building/Misc/FestivePresent_PoorC</li>
+							<li>Things/Building/Misc/FestivePresent_PoorD</li>
+						</texturePaths>
+						<quality>Poor</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_NormalA</li>
+							<li>Things/Building/Misc/FestivePresent_NormalB</li>
+							<li>Things/Building/Misc/FestivePresent_NormalC</li>
+							<li>Things/Building/Misc/FestivePresent_NormalD</li>
+						</texturePaths>
+						<quality>Normal</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_GoodA</li>
+							<li>Things/Building/Misc/FestivePresent_GoodB</li>
+							<li>Things/Building/Misc/FestivePresent_GoodC</li>
+							<li>Things/Building/Misc/FestivePresent_GoodD</li>
+						</texturePaths>
+						<quality>Good</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_ExcellentA</li>
+							<li>Things/Building/Misc/FestivePresent_ExcellentB</li>
+							<li>Things/Building/Misc/FestivePresent_ExcellentC</li>
+							<li>Things/Building/Misc/FestivePresent_ExcellentD</li>
+						</texturePaths>
+						<quality>Excellent</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_MasterworkA</li>
+							<li>Things/Building/Misc/FestivePresent_MasterworkB</li>
+							<li>Things/Building/Misc/FestivePresent_MasterworkC</li>
+							<li>Things/Building/Misc/FestivePresent_MasterworkD</li>
+						</texturePaths>
+						<quality>Masterwork</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/Misc/FestivePresent_LegendaryA</li>
+							<li>Things/Building/Misc/FestivePresent_LegendaryB</li>
+							<li>Things/Building/Misc/FestivePresent_LegendaryC</li>
+							<li>Things/Building/Misc/FestivePresent_LegendaryD</li>
+						</texturePaths>
+						<quality>Legendary</quality>
+					</li>
+
+				</graphics>
+			</li>
+			
+		</modExtensions>
 	</ThingDef>
 	
 </Defs>

@@ -5,7 +5,7 @@
 		<label>spruce tree</label>
 		<description>A tall conifer with dark green needles and densely packed branches. Its slender, conical shape is ideal for cold, snowy climates.</description>
 		<graphicData>
-			<texPath>Things/Plant/TreePine</texPath>
+			<texPath>Things/Plant/TreeFir</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 			<shadowData>
 				<volume>(0.15, 0.3, 0.15)</volume>
@@ -22,8 +22,8 @@
 			<visualSizeRange>1.5~3.0</visualSizeRange>
 			<harvestWork>800</harvestWork>
 			<harvestYield>27</harvestYield>
-			<pollutedGraphicPath>Things/Plant/TreePine_Polluted</pollutedGraphicPath>
-			<immatureGraphicPath>Things/Plant/TreePine_Immature</immatureGraphicPath>
+			
+			<immatureGraphicPath>Things/Plant/TreeFirImmature</immatureGraphicPath>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="TreeBase">
@@ -31,7 +31,7 @@
 		<label>fir tree</label>
 		<description>A majestic evergreen with soft, flat needles and smooth bark. Its symmetrical silhouette is often admired in alpine forests.</description>
 		<graphicData>
-			<texPath>Things/Plant/TreePine</texPath>
+			<texPath>Things/Plant/TreeSpruce</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 			<shadowData>
 				<volume>(0.15, 0.3, 0.15)</volume>
@@ -48,8 +48,8 @@
 			<visualSizeRange>1.5~3.0</visualSizeRange>
 			<harvestWork>800</harvestWork>
 			<harvestYield>27</harvestYield>
-			<pollutedGraphicPath>Things/Plant/TreePine_Polluted</pollutedGraphicPath>
-			<immatureGraphicPath>Things/Plant/TreePine_Immature</immatureGraphicPath>
+		
+			<immatureGraphicPath>Things/Plant/TreeSpruceImmature</immatureGraphicPath>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="TreeBase">
@@ -57,7 +57,7 @@
 		<label>juniper tree</label>
 		<description>A hardy evergreen shrub or small tree with spiky needles and aromatic berries. It thrives in rocky, arid landscapes.</description>
 		<graphicData>
-			<texPath>Things/Plant/TreePine</texPath>
+			<texPath>Things/Plant/TreeJuniper</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 			<shadowData>
 				<volume>(0.15, 0.3, 0.15)</volume>
@@ -74,8 +74,8 @@
 			<visualSizeRange>1.5~3.0</visualSizeRange>
 			<harvestWork>800</harvestWork>
 			<harvestYield>27</harvestYield>
-			<pollutedGraphicPath>Things/Plant/TreePine_Polluted</pollutedGraphicPath>
-			<immatureGraphicPath>Things/Plant/TreePine_Immature</immatureGraphicPath>
+		
+			<immatureGraphicPath>Things/Plant/TreeJuniperImmature</immatureGraphicPath>
 		</plant>
 	</ThingDef>
 </Defs>
