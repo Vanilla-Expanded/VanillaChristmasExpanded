@@ -17,10 +17,8 @@ namespace VanillaChristmasExpanded
             DefOfHelper.EnsureInitializedInCtor(typeof(InternalDefOf));
         }
 
-        public static FleckDef VCE_ConfettiA;
-        public static FleckDef VCE_ConfettiB;
-        public static FleckDef VCE_ConfettiC;
-        public static FleckDef VCE_ConfettiD;
+        public static EffecterDef VCE_Confetti;
+    
 
         public static SoundDef VCE_ConfettiExplosion;
     }

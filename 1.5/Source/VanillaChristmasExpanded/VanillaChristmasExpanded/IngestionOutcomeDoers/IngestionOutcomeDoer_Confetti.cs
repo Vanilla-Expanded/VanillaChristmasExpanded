@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using System.Security.Cryptography;
+using Verse.Noise;
 
 namespace VanillaChristmasExpanded
 {
@@ -14,24 +16,18 @@ namespace VanillaChristmasExpanded
         {
             if (pawn.Map != null)
             {
-                FleckMaker.Static(pawn.Position, pawn.Map, Confetti(Rand.RangeInclusive(0, 3)));
-                FleckMaker.Static(pawn.Position, pawn.Map, Confetti(Rand.RangeInclusive(0, 3)));
+                Effecter effecter = InternalDefOf.VCE_Confetti.Spawn();
+
+                //pawn.Map.effecterMaintainer.AddEffecterToMaintain(effecter, pawn.Position, 200);
+                effecter.Trigger(new TargetInfo(pawn.Position, pawn.Map), new TargetInfo(pawn.Position, pawn.Map));
+                effecter.Cleanup();
+
                 InternalDefOf.VCE_ConfettiExplosion.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
 
             }
         }
 
-        public static FleckDef Confetti(int index)
-        {
-            return index switch
-            {
-                0 => InternalDefOf.VCE_ConfettiA,
-                1 => InternalDefOf.VCE_ConfettiB,
-                2 => InternalDefOf.VCE_ConfettiC,
-                3 => InternalDefOf.VCE_ConfettiD,
-                _ => InternalDefOf.VCE_ConfettiA
-            };
-        }
+       
 
     }
 }
