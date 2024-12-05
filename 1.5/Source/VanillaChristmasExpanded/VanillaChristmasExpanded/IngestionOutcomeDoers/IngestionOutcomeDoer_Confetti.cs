@@ -6,7 +6,7 @@ using Verse;
 
 namespace VanillaChristmasExpanded
 {
-    public class IngestionOutcomeDoer_OffsetHemogen : IngestionOutcomeDoer
+    public class IngestionOutcomeDoer_Confetti : IngestionOutcomeDoer
     {
       
 
