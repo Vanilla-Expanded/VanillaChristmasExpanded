@@ -15,7 +15,7 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<ritualPatternBase>VCE_SingingCarolsPattern</ritualPatternBase>
-		<iconPath>UI/Placeholder</iconPath>
+		<iconPath>UI/Ideology/Ritual_FestiveCarolSinging</iconPath>
 		<ignoreNameUniqueness>false</ignoreNameUniqueness>
 		
 	</PreceptDef>
