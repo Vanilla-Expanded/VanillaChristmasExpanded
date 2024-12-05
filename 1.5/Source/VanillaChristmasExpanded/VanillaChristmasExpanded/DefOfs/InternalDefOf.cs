@@ -21,5 +21,8 @@ namespace VanillaChristmasExpanded
     
 
         public static SoundDef VCE_ConfettiExplosion;
+        public static SoundDef VCE_RitualSustainer_Carols;
+
+        public static ThingDef VCE_FestivePresent;
     }
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+ 
+ <RitualOutcomeEffectDef>
+    <defName>VCE_SingingCarolsOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>VanillaChristmasExpanded.RitualOutcomeEffectWorker_SingingCarols</workerClass>
+    
+    <comps>
+      
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>leader</roleId>
+        <label>leader present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(10,  0.25)</li>
+          
+          </points>
+        </curve>
+      </li>
+	  <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.2</qualityOffset>
+      </li>
+	  <li Class="VanillaChristmasExpanded.RitualOutcomeComp_Decembruary">
+        <qualityOffset>0.5</qualityOffset>
+		<label>during Decembary</label>
+		<labelNotMet>not during Decembary</labelNotMet>
+      </li>
+      
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>VCE_TerribleCarols</memory>
+        <description>The {0} was terrible. The leader displayed a lack of passion and the festive feeling just wasn't there.</description>
+		
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Boring</label>
+        <chance>0.15</chance>
+        <memory>VCE_BoringCarols</memory>
+        <description>The {0} was boring. The leader treated us like children, wanting so desperately to hear something to lift their spirits.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Fun</label>
+        <chance>0.6</chance>
+        <memory>VCE_FunCarols</memory>
+        <description>The {0} was super fun. The leader lifted our spirits and made us feel a festive spirit that will only make us stronger.</description>
+      
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>VCE_UnforgettableCarols</memory>
+        <description>The {0} was unforgettable! We can still hear the mesmerizing words of the carols, as they reminded us of the importance of our shared beliefs. We can just feel our sadness vanish away.</description>
+        
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+ 
+  
+  
+</Defs>

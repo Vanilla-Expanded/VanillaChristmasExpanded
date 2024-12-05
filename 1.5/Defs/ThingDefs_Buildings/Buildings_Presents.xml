@@ -12,7 +12,7 @@
 		<fillPercent>0.3</fillPercent>
 		<pathCost>50</pathCost>
 		<size>(1,1)</size>
-		
+		<clearBuildingArea>false</clearBuildingArea>
 		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>

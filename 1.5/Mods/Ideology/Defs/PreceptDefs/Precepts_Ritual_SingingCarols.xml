@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Precepts -->
+
+
+
+	<PreceptDef>
+		<defName>VCE_SingingCarols</defName>
+		<label>festive singing</label>
+		<description>Colonists gather around and sing festive carols to strengthen their bonds.</description>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<visible>true</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<ritualPatternBase>VCE_SingingCarolsPattern</ritualPatternBase>
+		<iconPath>UI/Placeholder</iconPath>
+		<ignoreNameUniqueness>false</ignoreNameUniqueness>
+		
+	</PreceptDef>
+
+
+
+
+
+</Defs>
