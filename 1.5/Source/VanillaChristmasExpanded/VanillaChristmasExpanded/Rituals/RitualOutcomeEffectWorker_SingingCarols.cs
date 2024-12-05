@@ -6,6 +6,8 @@ using RimWorld;
 using Verse.Sound;
 using Verse.AI.Group;
 using Verse.AI;
+using UnityEngine.UIElements;
+using Verse.Noise;
 
 
 namespace VanillaChristmasExpanded
@@ -58,13 +60,14 @@ namespace VanillaChristmasExpanded
             {
                 if (Rand.Chance(0.2f))
                 {
-
+                    InternalDefOf.VCE_ConfettiExplosion.PlayOneShotOnCamera();
                     foreach (Pawn pawn in totalPresence.Keys)
                     {
                         Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent), pawn.PositionHeld, pawn.Map);
                         thingToMake.SetFaction(pawn.Faction);
                         QualityCategory qualityPresent = QualityUtility.GenerateQualityRandomEqualChance();
                         thingToMake.TryGetComp<CompQuality>().SetQuality(qualityPresent, null);
+                        Utils.PopUpConfetti(pawn.Position, pawn.Map, false);
                     }
                 }
 
