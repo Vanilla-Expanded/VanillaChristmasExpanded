@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <FleckDef Name="VCE_ConfettiMote" Abstract = "True" ParentName="FleckBase_Thrown">
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>6</solidTime>
+		<fadeOutTime>3.2</fadeOutTime>
+		<growthRate>0.005</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="VCE_ConfettiMote">
+		<defName>VCE_ConfettiA</defName>
+		<graphicData>
+			<texPath>Things/Mote/Confetti/VFE_ConfettiA</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="VCE_ConfettiMote">
+		<defName>VCE_ConfettiB</defName>
+		<graphicData>
+			<texPath>Things/Mote/Confetti/VFE_ConfettiB</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="VCE_ConfettiMote">
+		<defName>VCE_ConfettiC</defName>
+		<graphicData>
+			<texPath>Things/Mote/Confetti/VFE_ConfettiC</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="VCE_ConfettiMote">
+		<defName>VCE_ConfettiD</defName>
+		<graphicData>
+			<texPath>Things/Mote/Confetti/VFE_ConfettiD</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+	</FleckDef>
+
+</Defs>

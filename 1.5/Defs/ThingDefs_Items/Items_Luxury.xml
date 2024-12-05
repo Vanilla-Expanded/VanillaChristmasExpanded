@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_FestiveCracker</defName>
+		<label>festive cracker</label>
+		<description>A delicious preparation of cocoa seeds ground together with sugar and vanilla. Very pleasurable to eat, but not very nutritious.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Chocolate</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.88</drawSize>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>2</MarketValue>
+			<Mass>0.055</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>12</DeteriorationRate>
+			<Nutrition>0.04</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<foodType>Processed</foodType>
+			<joy>0.18</joy>
+			<joyKind>Gluttonous</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<specialThoughtDirect>VCE_ConsumedFestiveCracker</specialThoughtDirect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<outcomeDoers>
+        <li Class="VanillaChristmasExpanded.IngestionOutcomeDoer_Confetti">
+        
+        </li>
+      
+      </outcomeDoers>
+		</ingestible>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>10</possessionCount>
+	</ThingDef>
+</Defs>
