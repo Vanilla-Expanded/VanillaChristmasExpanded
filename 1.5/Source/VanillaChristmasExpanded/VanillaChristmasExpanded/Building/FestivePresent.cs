@@ -83,6 +83,9 @@ namespace VanillaChristmasExpanded
           
             if (list2 != null)
             {
+                Messages.Message("VCE_OpenedPresent".Translate(list2.ToStringSafeEnumerable()), MessageTypeDefOf.PositiveEvent, true);
+
+
                 foreach (Thing thing in list2)
                 {
                    

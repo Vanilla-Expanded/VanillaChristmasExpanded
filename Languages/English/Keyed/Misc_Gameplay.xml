@@ -2,7 +2,7 @@
 <LanguageData>
 
 	
-	<VCE_OpenPresent>unwrap present</VCE_OpenPresent>
-	<VCE_OpenPresentDesc>Unwrap the festive present. Depending on quality of the present, better or worse items can be obtained from it.</VCE_OpenPresentDesc>
+	<VCE_OpenedPresent>The opened present contained {1} inside!</VCE_OpenedPresent>
+	
 	
 </LanguageData>
