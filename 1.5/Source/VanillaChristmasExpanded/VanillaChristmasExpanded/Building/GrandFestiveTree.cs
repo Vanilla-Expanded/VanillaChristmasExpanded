@@ -15,10 +15,13 @@ namespace VanillaChristmasExpanded
     {
 
         public CompQuality compQuality;
+        public CompPowerTrader compPower;
         public Graphic_Single cachedGraphic = null;
         public GraphicsByQualityExtension cachedGraphicsExtension;
         public string cachedGraphicPath = "";
         public int cachedGraphicIndex = 0;
+        public int tickCounter = 0;
+        public bool onDayCounter = false;
 
         public override void ExposeData()
         {
@@ -26,6 +29,65 @@ namespace VanillaChristmasExpanded
 
             Scribe_Values.Look(ref this.cachedGraphicPath, "cachedGraphicPath", "", false);
             Scribe_Values.Look(ref this.cachedGraphicIndex, "cachedGraphicIndex", 1, false);
+            Scribe_Values.Look(ref this.cachedGraphicIndex, "tickCounter", 0, false);
+            Scribe_Values.Look(ref this.onDayCounter, "onDayCounter", false, false);
+
+
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if(!onDayCounter&&this.Map!=null&& this.IsHashIntervalTick(60) && compPower?.PowerOn == true)
+            {
+                if (GenLocalDate.HourOfDay(this.Map) == 0)
+                {
+                    Vector2 vector = Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile);
+                    Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
+                    if (quadrum == Quadrum.Decembary)
+                    {
+                        FestiveFavorManager.Instance.AddFestiveFavor(FestiveFavorByQuality(compQuality.Quality));
+                        onDayCounter = true;
+                    }
+                }              
+
+            }
+            if (onDayCounter)
+            {
+                tickCounter++;
+                if (tickCounter > 60000)
+                {
+                    tickCounter = 0;
+                    onDayCounter = false;
+                }
+            }
+            
+
+        }
+
+        public int FestiveFavorByQuality(QualityCategory quality)
+        {
+            switch (quality)
+            {
+
+                case QualityCategory.Awful:
+                    return 1;
+                case QualityCategory.Poor:
+                    return 2;
+                case QualityCategory.Normal:
+                    return 4;
+                case QualityCategory.Good:
+                    return 8;
+                case QualityCategory.Excellent:
+                    return 16;
+                case QualityCategory.Masterwork:
+                    return 32;
+                case QualityCategory.Legendary:
+                    return 64;
+
+            }
+            return 1;
 
 
         }
@@ -33,6 +95,7 @@ namespace VanillaChristmasExpanded
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             compQuality = this.TryGetComp<CompQuality>();
+            compPower = this.TryGetComp<CompPowerTrader>();
             cachedGraphicsExtension = this.def.GetModExtension<GraphicsByQualityExtension>();
             if (cachedGraphicsExtension != null)
             {

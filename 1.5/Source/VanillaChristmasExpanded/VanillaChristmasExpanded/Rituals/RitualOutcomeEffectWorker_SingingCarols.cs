@@ -51,13 +51,19 @@ namespace VanillaChristmasExpanded
             }
 
 
-            if (outcome.Positive)
+            if (outcome.positivityIndex == -1)
             {
-               //todo
+                FestiveFavorManager.Instance.AddFestiveFavor(totalPresence.Keys.Count);
+            }
+
+            if (outcome.positivityIndex == 1)
+            {
+                FestiveFavorManager.Instance.AddFestiveFavor(totalPresence.Keys.Count*3);
             }
 
             if (outcome.positivityIndex == 2)
             {
+                FestiveFavorManager.Instance.AddFestiveFavor(totalPresence.Keys.Count*6);
                 if (Rand.Chance(0.2f))
                 {
                     InternalDefOf.VCE_ConfettiExplosion.PlayOneShotOnCamera();

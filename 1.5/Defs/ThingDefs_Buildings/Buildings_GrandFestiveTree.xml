@@ -17,6 +17,7 @@
 			</shadowData>
 			<drawSize>3</drawSize>
 		</graphicData>
+		<tickerType>Normal</tickerType>
 		<costList>
 			<Steel>60</Steel>
 			<WoodLog>120</WoodLog>
