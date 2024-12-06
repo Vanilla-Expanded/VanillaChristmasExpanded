@@ -164,7 +164,14 @@ namespace VanillaChristmasExpanded
           
             if (list2 != null)
             {
-                Messages.Message("VCE_OpenedPresent".Translate(list2.Select(x=> x.def.LabelCap).ToStringSafeEnumerable()), MessageTypeDefOf.PositiveEvent, true);
+                List<string> listToDisplay = new List<string>();
+
+                foreach(Thing t in list2)
+                {
+                    listToDisplay.Add(t.stackCount.ToString() + "x " + t.def.LabelCap);
+                }
+
+                Messages.Message("VCE_OpenedPresent".Translate(listToDisplay.ToStringSafeEnumerable()), MessageTypeDefOf.PositiveEvent, true);
 
 
                 foreach (Thing thing in list2)
