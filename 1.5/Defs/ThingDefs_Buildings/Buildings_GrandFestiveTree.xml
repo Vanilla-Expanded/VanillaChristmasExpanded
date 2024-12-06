@@ -9,7 +9,7 @@
 		<thingClass>VanillaChristmasExpanded.GrandFestiveTree</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/GrandFestiveTree/FestiveTree_Awful_Red</texPath>
+			<texPath>Things/Building/GrandFestiveTree/FestiveTree_Empty</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.6, 0.3)</volume>
