@@ -11,11 +11,14 @@ namespace VanillaChristmasExpanded
 	}
 
 	[HotSwappable]
+	[StaticConstructorOnStartup]
 	public class FestiveFavorManager : GameComponent
 	{
 		private int festiveFavor;
+		private static readonly Texture2D FestiveFavorIcon = ContentFinder<Texture2D>.Get("UI/FestiveFavor");
 
 		public static FestiveFavorManager Instance;
+		public static bool Active => Find.Storyteller?.def == InternalDefOf.VCE_SantaSeasonal;
 		public FestiveFavorManager(Game game)
 		{
 			Instance = this;
@@ -47,9 +50,40 @@ namespace VanillaChristmasExpanded
 
 		public void DrawUI()
 		{
-			Rect rect = new Rect(100, 100, 200, 60);
-			Widgets.Label(new Rect(rect.x, rect.y, rect.width, 30), "Festive Favor: " + festiveFavor);
-			Widgets.Label(new Rect(rect.x, rect.y + 30, rect.width, 30), "Days until festive presents: " + DaysUntilDecembrary10);
+			float iconSize = 24f;
+			float rightMargin = 10f;
+			float topMargin = 10f;
+			var festiveFavorText = "VCE_FestiveFavor".Translate(festiveFavor);
+			var festiveFavorTextWidth = Text.CalcSize(festiveFavorText).x;
+			var daysUntilPresents = "VCE_DaysUntilPresents".Translate(DaysUntilDecembrary10);
+			var textWidth = Text.CalcSize(daysUntilPresents).x;
+			
+			Rect labelRect = new Rect(
+				UI.screenWidth - rightMargin - festiveFavorTextWidth,
+				topMargin,
+				festiveFavorTextWidth,
+				iconSize
+			);
+
+			Rect iconRect = new Rect(
+				labelRect.x - iconSize - 5,
+				topMargin,
+				iconSize,
+				iconSize
+			);
+
+			Rect countdownRect = new Rect(
+				UI.screenWidth - rightMargin - textWidth,
+				labelRect.y + iconSize + 5f,
+				textWidth,
+				iconSize
+			);
+
+			Text.Anchor = TextAnchor.MiddleRight;
+			GUI.DrawTexture(iconRect, FestiveFavorIcon);
+			Widgets.Label(labelRect, festiveFavorText);
+			Widgets.Label(countdownRect, daysUntilPresents);
+			Text.Anchor = TextAnchor.UpperLeft;
 		}
 
 		public void AddFestiveFavor(int amount)
@@ -65,8 +99,11 @@ namespace VanillaChristmasExpanded
 		public override void GameComponentOnGUI()
 		{
 			base.GameComponentOnGUI();
-			DrawUI();
-		}
+			if (Active)
+			{
+                DrawUI();
+            }
+        }
 
 		public override void ExposeData()
 		{

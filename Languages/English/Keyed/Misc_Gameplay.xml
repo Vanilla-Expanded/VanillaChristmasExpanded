@@ -3,6 +3,7 @@
 
 	
 	<VCE_OpenedPresent>The opened present contained {1} inside!</VCE_OpenedPresent>
-	
+	<VCE_FestiveFavor>Festive Favor: {0}</VCE_FestiveFavor>
+	<VCE_DaysUntilPresents>Days until festive presents: {0}</VCE_DaysUntilPresents>
 	
 </LanguageData>
