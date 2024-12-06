@@ -93,6 +93,33 @@ namespace VanillaChristmasExpanded
 
 
         }
+
+        public ThingSetMakerDef ThingSetMakerByQuality(QualityCategory quality)
+        {
+            switch (quality)
+            {
+
+                case QualityCategory.Awful:
+                    return InternalDefOf.VCE_Reward_Resources;
+                case QualityCategory.Poor:
+                    return InternalDefOf.VCE_Reward_Resources;
+                case QualityCategory.Normal:
+                    return InternalDefOf.VCE_Reward_Anything;
+                case QualityCategory.Good:
+                    return InternalDefOf.VCE_Reward_Anything;
+                case QualityCategory.Excellent:
+                    return InternalDefOf.VCE_Reward_Anything;
+                case QualityCategory.Masterwork:
+                    return InternalDefOf.VCE_Reward_Anything;
+                case QualityCategory.Legendary:
+                    return InternalDefOf.VCE_Reward_Anything;
+
+            }
+            return ThingSetMakerDefOf.Reward_ItemsStandard;
+
+
+        }
+
         public IntRange AmountByQuality(QualityCategory quality)
         {
             switch (quality)
@@ -132,7 +159,7 @@ namespace VanillaChristmasExpanded
             parms.minSingleItemMarketValuePct = 0;
             parms.allowNonStackableDuplicates = true;
             parms.countRange = AmountByQuality(quality);
-            List<Thing> list2 = ThingSetMakerDefOf.Reward_ItemsStandard.root.Generate(parms);
+            List<Thing> list2 = ThingSetMakerByQuality(quality).root.Generate(parms);
 
           
             if (list2 != null)

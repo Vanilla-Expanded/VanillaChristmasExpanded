@@ -26,5 +26,8 @@ namespace VanillaChristmasExpanded
 		public static ThingDef VCE_FestivePresent;
 
 		public static StorytellerDef VCE_SantaSeasonal;
-	}
+
+		public static ThingSetMakerDef VCE_Reward_Resources;
+        public static ThingSetMakerDef VCE_Reward_Anything;
+    }
 }
