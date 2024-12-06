@@ -8,8 +8,9 @@ namespace VanillaChristmasExpanded
     public class JobGiver_GiveSilentSpeechFacingTarget : ThinkNode_JobGiver
     {
      
-
         public bool faceSpectatorsIfPossible;
+
+        public bool patata;
 
         public bool showSpeechBubbles = true;
 
