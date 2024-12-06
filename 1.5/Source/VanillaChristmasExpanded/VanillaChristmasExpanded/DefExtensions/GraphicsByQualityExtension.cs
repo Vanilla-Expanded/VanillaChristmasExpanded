@@ -9,13 +9,13 @@ using RimWorld;
 namespace VanillaChristmasExpanded
 {
 
-    public class PresentGraphicsByQuality : DefModExtension
+    public class GraphicsByQualityExtension : DefModExtension
     {
-        public List<PresentGraphics> graphics = null;
+        public List<GraphicsByQuality> graphics = null;
 
     }
 
-    public class PresentGraphics
+    public class GraphicsByQuality
     {
         public List<string> texturePaths;
         public QualityCategory quality;

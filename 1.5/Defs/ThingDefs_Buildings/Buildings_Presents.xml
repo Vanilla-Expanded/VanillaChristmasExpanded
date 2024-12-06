@@ -30,7 +30,7 @@
 		 
 		</comps>
 		<modExtensions>
-			<li Class="VanillaChristmasExpanded.PresentGraphicsByQuality">
+			<li Class="VanillaChristmasExpanded.GraphicsByQualityExtension">
 				<graphics>
 					<li>
 						<texturePaths>

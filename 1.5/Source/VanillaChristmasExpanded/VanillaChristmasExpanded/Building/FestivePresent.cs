@@ -16,7 +16,7 @@ namespace VanillaChristmasExpanded
 
         public CompQuality compQuality;
         public Graphic_Single cachedGraphic = null;
-        public PresentGraphicsByQuality cachedGraphicsExtension;
+        public GraphicsByQualityExtension cachedGraphicsExtension;
         public string cachedGraphicPath="";
 
         public override void ExposeData()
@@ -31,7 +31,7 @@ namespace VanillaChristmasExpanded
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             compQuality = this.TryGetComp<CompQuality>();
-            cachedGraphicsExtension = this.def.GetModExtension<PresentGraphicsByQuality>();
+            cachedGraphicsExtension = this.def.GetModExtension<GraphicsByQualityExtension>();
             if (cachedGraphicsExtension != null)
             {
                 LongEventHandler.ExecuteWhenFinished(delegate { StoreGraphics(); });
@@ -137,7 +137,7 @@ namespace VanillaChristmasExpanded
           
             if (list2 != null)
             {
-                Messages.Message("VCE_OpenedPresent".Translate(list2.ToStringSafeEnumerable()), MessageTypeDefOf.PositiveEvent, true);
+                Messages.Message("VCE_OpenedPresent".Translate(list2.Select(x=> x.def.LabelCap).ToStringSafeEnumerable()), MessageTypeDefOf.PositiveEvent, true);
 
 
                 foreach (Thing thing in list2)
