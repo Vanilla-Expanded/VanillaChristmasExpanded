@@ -12,6 +12,7 @@
 				<volume>(0.3, 0.6, 0.3)</volume>
 				<offset>(0,0,-0.1)</offset>
 			</shadowData>
+			<drawSize>2</drawSize>
 		</graphicData>
 		<costList>
 			<Steel>20</Steel>
