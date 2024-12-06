@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
@@ -17,8 +16,5 @@ namespace VanillaChristmasExpanded
             var harmony = new Harmony("com.VanillaChristmasExpanded");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
-
-
     }
-
 }
