@@ -7,7 +7,7 @@
   <RitualBehaviorDef>
     <defName>VCE_SingingCarolsBehaviour</defName>
 	<workerClass>VanillaChristmasExpanded.RitualBehaviorWorker_SingingCarols</workerClass>
-    <durationTicks>1500</durationTicks>
+    <durationTicks>3500</durationTicks>
     <roles>
       <li Class="RitualRoleTag">
         <label>speaker</label>
@@ -39,8 +39,8 @@
         <roleBehaviors>
           <li>
             <roleId>leader</roleId>
-            <dutyDef>SpeakOnCell_Leader</dutyDef>
-            <speakerInteraction>Speech_DateRitual</speakerInteraction>
+            <dutyDef>VCE_SilentSpeakOnCell_Leader</dutyDef>
+            <speakerInteraction>VCE_Speech_Carols</speakerInteraction>
             <customPositions>
               <li Class="RitualPosition_BesideThing" />
             </customPositions>

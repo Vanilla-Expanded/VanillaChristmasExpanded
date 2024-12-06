@@ -295,6 +295,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobGivers\JobGiver_GiveSilentSpeechFacingTarget.cs" />
     <Compile Include="Building\FestivePresent.cs" />
     <Compile Include="DefExtensions\PresentGraphicsByQuality.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
