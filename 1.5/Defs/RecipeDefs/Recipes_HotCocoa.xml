@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecipeDef>
+		<defName>VCE_MakeHotCocoa</defName>
+		<label>make hot cocoa</label>
+		<description>Make a comforting and creamy beverage offering a rich chocolate flavor that warms both body and soul.</description>
+		<jobString>Making hot cocoa.</jobString>
+		<workAmount>160</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<VCE_HotCocoa>5</VCE_HotCocoa>
+		</products>
+	</RecipeDef>
+</Defs>

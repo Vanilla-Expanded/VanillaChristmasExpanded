@@ -3,7 +3,7 @@
 	<ThingDef ParentName="DrugBase">
 		<defName>VCE_Eggnog</defName>
 		<label>eggnog</label>
-		<description>A masterpiece of the culinary arts, eggnog are the perfect beverage for Christmas.</description>
+		<description>A rich, creamy holiday drink made from milk, eggs, and sugar, often spiced with nutmeg. Eggnog is sweet and comforting, but its festive charm is enhanced when spiked with alcohol, leading to warmth—and potential overindulgence.</description>
 		<graphicData>
 			<texPath>Things/Item/Eggnog</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

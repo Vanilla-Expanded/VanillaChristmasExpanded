@@ -10,12 +10,25 @@ namespace VanillaChristmasExpanded
 {
     public class IngestionOutcomeDoer_GainFavor : IngestionOutcomeDoer
     {
-      public int amount = 1;
+        public int amount = 1;
+        public bool needsDecembary = false;
 
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
         {
 
-            FestiveFavorManager.Instance.AddFestiveFavor(amount);
+            if (!needsDecembary)
+            {
+                FestiveFavorManager.Instance.AddFestiveFavor(amount);
+            }
+            else
+            {
+                Vector2 vector = Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile);
+                Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
+                if (quadrum == Quadrum.Decembary)
+                {
+                    FestiveFavorManager.Instance.AddFestiveFavor(amount);
+                }
+            }
 
         }
 
