@@ -23,12 +23,17 @@ namespace VanillaChristmasExpanded
 		public static SoundDef VCE_ConfettiExplosion;
         [MayRequireIdeology]
         public static SoundDef VCE_RitualSustainer_Carols;
+        [MayRequireIdeology]
+        public static HistoryEventDef CharityFulfilled_HospitalityRefugees;
 
-		public static ThingDef VCE_FestivePresent;
+
+        public static ThingDef VCE_FestivePresent;
 
 		public static StorytellerDef VCE_SantaSeasonal;
 
 		public static ThingSetMakerDef VCE_Reward_Resources;
         public static ThingSetMakerDef VCE_Reward_Anything;
+
+		public static InteractionDef KindWords;
     }
 }

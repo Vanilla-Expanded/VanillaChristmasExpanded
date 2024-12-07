@@ -52,6 +52,9 @@
 					<divideByBodySize>true</divideByBodySize>
 					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
 				</li>
+				<li Class="VanillaChristmasExpanded.IngestionOutcomeDoer_GainFavor">
+					
+				</li>
 			</outcomeDoers>
 		</ingestible>
 		<comps>
