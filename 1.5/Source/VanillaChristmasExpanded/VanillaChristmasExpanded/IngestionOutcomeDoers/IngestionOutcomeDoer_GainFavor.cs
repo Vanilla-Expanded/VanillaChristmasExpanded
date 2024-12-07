@@ -22,7 +22,7 @@ namespace VanillaChristmasExpanded
             }
             else
             {
-                Vector2 vector = Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile);
+                Vector2 vector = Find.WorldGrid.LongLatOf(pawn.Tile);
                 Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
                 if (quadrum == Quadrum.Decembary)
                 {

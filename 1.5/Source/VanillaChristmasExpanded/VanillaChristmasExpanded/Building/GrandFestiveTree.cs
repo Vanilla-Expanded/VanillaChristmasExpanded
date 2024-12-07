@@ -43,7 +43,7 @@ namespace VanillaChristmasExpanded
             {
                 if (GenLocalDate.HourOfDay(this.Map) == 0)
                 {
-                    Vector2 vector = Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile);
+                    Vector2 vector = Find.WorldGrid.LongLatOf(Tile);
                     Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
                     if (quadrum == Quadrum.Decembary)
                     {
