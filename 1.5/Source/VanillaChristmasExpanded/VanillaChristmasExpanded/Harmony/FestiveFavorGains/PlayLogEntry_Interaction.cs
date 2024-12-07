@@ -3,10 +3,11 @@ using RimWorld;
 using Verse;
 using HarmonyLib;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace VanillaChristmasExpanded
 {
-    [HarmonyPatch(typeof(PlayLogEntry_Interaction), MethodType.Constructor)]
+    [HarmonyPatch(typeof(PlayLogEntry_Interaction), MethodType.Constructor, new Type[] { typeof(InteractionDef), typeof(Pawn), typeof(Pawn), typeof(List<RulePackDef>) })]
     public static class VanillaChristmasExpanded_PlayLogEntry_Interaction_Patch
     {
 
