@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net48</TargetFramework> <!-- Ensure this matches the original framework version -->
+    <TargetFramework>net472</TargetFramework> <!-- Ensure this matches the original framework version -->
     <RootNamespace>VanillaChristmasExpanded</RootNamespace>
     <AssemblyName>VanillaChristmasExpanded</AssemblyName>
     <LangVersion>latest</LangVersion>
@@ -15,7 +15,8 @@
     <Optimize>true</Optimize>
     <OutputPath>..\..\..\Assemblies\</OutputPath> <!-- Output directly to Assemblies -->
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>none</DebugType> <!-- Set to 'none' to exclude debug info -->
+    <DebugType>none</DebugType>
+    <WarningLevel>2</WarningLevel> <!-- Set to 'none' to exclude debug info -->
   </PropertyGroup>
 
   <!-- Release configuration -->
