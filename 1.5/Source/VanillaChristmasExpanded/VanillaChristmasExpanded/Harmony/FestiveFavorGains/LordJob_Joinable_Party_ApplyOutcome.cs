@@ -12,7 +12,7 @@ namespace VanillaChristmasExpanded
     {
 
 
-        public static void Postfix(InteractionDef intDef)
+        public static void Postfix()
         {
 
             
