@@ -35,5 +35,6 @@ namespace VanillaChristmasExpanded
         public static ThingSetMakerDef VCE_Reward_Anything;
 
 		public static InteractionDef KindWords;
+		public static ThingDef VCE_FestiveCracker;
     }
 }
