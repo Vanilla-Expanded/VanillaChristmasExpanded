@@ -7,5 +7,6 @@
 	<VCE_DaysUntilPresents>Days until festive presents: {0}</VCE_DaysUntilPresents>
 	<VCE_ChangeDecorationsDesc>Change the festive decorations of the object.</VCE_ChangeDecorationsDesc>
 	<VCE_ChangeDecorations>Change decorations</VCE_ChangeDecorations>
-	
+	<VCE_FestiveFavor_Label>Festive Favor</VCE_FestiveFavor_Label>
+
 </LanguageData>

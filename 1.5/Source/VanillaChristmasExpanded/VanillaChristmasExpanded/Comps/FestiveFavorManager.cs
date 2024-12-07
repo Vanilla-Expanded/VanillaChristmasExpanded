@@ -17,7 +17,7 @@ namespace VanillaChristmasExpanded
 	public class FestiveFavorManager : GameComponent
 	{
 		private int festiveFavor;
-		private static readonly Texture2D FestiveFavorIcon = ContentFinder<Texture2D>.Get("UI/FestiveFavor");
+		public static readonly Texture2D FestiveFavorIcon = ContentFinder<Texture2D>.Get("UI/FestiveFavor");
 
 		public static FestiveFavorManager Instance;
 		public static bool Active => Find.Storyteller?.def == InternalDefOf.VCE_SantaSeasonal;
@@ -148,7 +148,7 @@ namespace VanillaChristmasExpanded
 		public override void GameComponentTick()
 		{
 			base.GameComponentTick();
-			if (Find.TickManager.TicksGame % GenDate.TicksPerHour == 0 && DaysUntilDecembrary10 == 0)
+			if (Active && Find.TickManager.TicksGame % GenDate.TicksPerHour == 0 && DaysUntilDecembrary10 == 0)
 			{
 				var map = Find.AnyPlayerHomeMap;
 				if (map != null && GenLocalDate.HourOfDay(map) == 19)
