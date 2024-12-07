@@ -1,29 +1,45 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using RimWorld.QuestGen;
 using Verse;
 
 namespace VanillaChristmasExpanded
 {
-	[HarmonyPatch(typeof(RewardsGenerator), "DoGenerate")]
-	public static class RewardsGenerator_GenerateRewards_Patch
+	[HarmonyPatch(typeof(QuestGen_Rewards), "GiveRewards")]
+	public static class QuestGen_Rewards_GiveRewards_Patch
 	{
-		public static void Prefix(ref RewardsGeneratorParams parms, out Reward_FestiveFavor __state)
+		public static void Prefix(out float __state, RewardsGeneratorParams parms, bool? useDifficultyFactor = null)
 		{
-			if (FestiveFavorManager.Active && !parms.thingRewardDisallowed && !parms.thingRewardItemsOnly)
+			Slate slate = QuestGen.slate;
+			RewardsGeneratorParams parmsResolved = parms;
+			__state = ((parmsResolved.rewardValue == 0f) ? slate.Get("rewardValue", 0f) : parmsResolved.rewardValue);
+			if (useDifficultyFactor ?? true)
 			{
-				__state = new Reward_FestiveFavor();
-				__state.InitFromValue(parms.rewardValue, parms, out var value);
-				parms.rewardValue -= value;
-				if (value == 0f) __state = null;
+				parmsResolved.rewardValue *= Find.Storyteller.difficulty.EffectiveQuestRewardValueFactor;
+				parmsResolved.rewardValue = Math.Max(1f, parmsResolved.rewardValue);
 			}
-			else __state = null;
 		}
-
-		public static void Postfix(ref List<Reward> __result, Reward_FestiveFavor __state)
+		
+		public static void Postfix(QuestPart_Choice __result, RewardsGeneratorParams parms, float __state)
 		{
-			if (__state != null) __result.Add(__state);
+			if (FestiveFavorManager.Active && __state > 0)
+			{
+				var reward = new Reward_FestiveFavor();
+				RewardsGeneratorParams parmsResolved = parms;
+				parmsResolved.rewardValue = __state;
+				reward.InitFromValue(parmsResolved.rewardValue, parms, out var value);
+				QuestPart_Choice.Choice choice = new QuestPart_Choice.Choice();
+				choice.rewards.Add(reward);
+				__result.choices.Add(choice);
+				foreach (QuestPart item in reward.GenerateQuestParts(0, parms, null, null, null, null))
+				{
+					QuestGen.quest.AddPart(item);
+					choice.questParts.Add(item);
+				}
+			}
 		}
 	}
 }
