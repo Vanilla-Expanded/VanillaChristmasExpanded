@@ -58,7 +58,9 @@ namespace VanillaChristmasExpanded
         [MayRequire("OskarPotocki.VFE.Empire")]
         public static PreceptDef VFEE_RoyalAddress;
 
+        public static WeatherDef VCE_FestiveSnow;
 
+        public static GameConditionDef VCE_ColdSnap;
 
     }
 }

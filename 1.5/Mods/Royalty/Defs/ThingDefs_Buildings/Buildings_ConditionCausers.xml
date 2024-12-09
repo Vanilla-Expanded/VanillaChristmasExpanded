@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ConditionCauserBase">
+		<defName>VCE_SnowSpewer_Causer</defName>
+		<label>snow spewer</label>
+		<description>An advanced climatic manipulator designed for environmental transformation. By extracting atmospheric moisture and seeding it with ultra-cold nano-crystals, the snow spewer blankets entire regions with continuous snowfall, turning any landscape into a frozen wonderland.</description>
+		<size>(4,4)</size>
+		<graphicData>
+			<texPath>Things/Building/Snowspewer/Snowspewer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		<building>
+			<soundAmbient>WeatherAffecter_Ambience</soundAmbient>
+		</building>
+		<comps>
+			<li Class="CompProperties_CausesGameCondition">
+				<conditionDef>VCE_ColdSnap</conditionDef>
+				<worldRange>10</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+	<SitePartDef ParentName="ConditionCauserSitePartBase">
+		<defName>VCE_ColdSnap</defName>
+		<label>snow spewer</label>
+		<description>A snow spewer is blanketing entire regions with continuous snowfall, turning any landscape into a frozen wonderland.</description>
+		<workerClass>SitePartWorker_ConditionCauser</workerClass>
+		<conditionCauserDef>VCE_SnowSpewer_Causer</conditionCauserDef>
+	</SitePartDef>
+	<GenStepDef ParentName="ConditionCauserGenStepBase">
+		<defName>VCE_ColdSnap</defName>
+		<linkWithSite>VCE_ColdSnap</linkWithSite>
+	</GenStepDef>
+</Defs>
