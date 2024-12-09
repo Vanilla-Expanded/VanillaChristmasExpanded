@@ -18,9 +18,8 @@ namespace VanillaChristmasExpanded
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
 
-            Vector2 vector = Find.WorldGrid.LongLatOf(ritual.Map.Tile);
-            Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
-            if(quadrum == Quadrum.Decembary)
+         
+            if(Utils.IsDecembary(ritual.Map.Tile))
             {
                 return 1;
             }
@@ -39,9 +38,8 @@ namespace VanillaChristmasExpanded
             bool flag = false;
             if (ritualTarget.Map != null)
             {
-                Vector2 vector = Find.WorldGrid.LongLatOf(ritualTarget.Map.Tile);
-                Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
-                flag = quadrum == Quadrum.Decembary;
+             
+                flag = Utils.IsDecembary(ritualTarget.Map.Tile);
                 quality = (flag ? qualityOffset : 0f);
             }
             return new QualityFactor

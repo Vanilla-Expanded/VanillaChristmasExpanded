@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="PlantFoodRawBase">
+		<defName>VCE_Gingerbread</defName>
+		<label>gingerbread</label>
+		<description>Sweet and spicy gingerbread. Can be consumed raw or added as an ingredient in meals, but can also be used to construct sturdy objects with high beauty value.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>
+		<graphicData>
+			<texPath>Things/Item/Resources/Gingerbread</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.7</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Nutrition>0.1</Nutrition>
+			<SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.65</BluntDamageMultiplier>
+		</statBases>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<foodType>Processed</foodType>
+			<tasteThought/>
+			<joy>0.10</joy>
+			<joyKind>Gluttonous</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+		</ingestible>
+		<stuffProps>
+			<color>(130, 77, 38)</color>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<commonality>0</commonality>
+			<soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+			<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+			
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<WorkToBuild>240</WorkToBuild>
+			</statOffsets>
+			<statFactors>
+				<Beauty>1.2</Beauty>
+				<MaxHitPoints>1.2</MaxHitPoints>
+				<WorkToBuild>8</WorkToBuild>
+				<Flammability>0.6</Flammability>
+				<WorkToMake>1.5</WorkToMake>
+				<MeleeWeapon_CooldownMultiplier>1.65</MeleeWeapon_CooldownMultiplier>
+				<DoorOpenSpeed>0.75</DoorOpenSpeed>
+				<BedRestEffectiveness>1</BedRestEffectiveness>
+			</statFactors>
+			<canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+		</stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</ThingDef>
+</Defs>

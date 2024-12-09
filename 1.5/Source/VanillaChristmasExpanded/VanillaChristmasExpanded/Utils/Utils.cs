@@ -1,8 +1,9 @@
-﻿using System;
+﻿using RimWorld;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using RimWorld.Planet;
 using Verse;
 using Verse.Sound;
 
@@ -24,6 +25,16 @@ namespace VanillaChristmasExpanded
 
         }
 
+        public static bool IsDecembary(int tile)
+        {
+            Vector2 vector = Find.WorldGrid.LongLatOf(tile);
+            Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
+            if (quadrum == Quadrum.Decembary)
+            {
+                return true;
+            }
+            return false;
+        }
 
     }
 }

@@ -22,9 +22,8 @@ namespace VanillaChristmasExpanded
             }
             else
             {
-                Vector2 vector = Find.WorldGrid.LongLatOf(pawn.Tile);
-                Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
-                if (quadrum == Quadrum.Decembary)
+               
+                if (Utils.IsDecembary(pawn.Tile))
                 {
                     FestiveFavorManager.Instance.AddFestiveFavor(amount);
                 }

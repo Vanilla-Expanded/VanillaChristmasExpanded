@@ -43,9 +43,8 @@ namespace VanillaChristmasExpanded
             {
                 if (GenLocalDate.HourOfDay(this.Map) == 0)
                 {
-                    Vector2 vector = Find.WorldGrid.LongLatOf(Tile);
-                    Quadrum quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, vector.x);
-                    if (quadrum == Quadrum.Decembary)
+                  
+                    if (Utils.IsDecembary(Tile))
                     {
                         FestiveFavorManager.Instance.AddFestiveFavor(FestiveFavorByQuality(compQuality.Quality));
                         onDayCounter = true;
