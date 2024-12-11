@@ -30,7 +30,7 @@
 			<packAnimal>true</packAnimal>
 			<baseBodySize>4.0</baseBodySize>
 			<baseHealthScale>3.6</baseHealthScale>
-			<baseHungerRate>0.275</baseHungerRate>
+			<baseHungerRate>1.1</baseHungerRate>
 			<foodType>VegetarianRoughAnimal</foodType>
 			<leatherDef>Leather_Plain</leatherDef>
 			<wildness>0.75</wildness>
