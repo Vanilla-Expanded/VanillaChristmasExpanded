@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-
-	
 	<VCE_OpenedPresent>The opened present contained {0} inside!</VCE_OpenedPresent>
 	<VCE_FestiveFavor>Festive Favor: {0}</VCE_FestiveFavor>
 	<VCE_DaysUntilPresents>Days until festive presents: {0}</VCE_DaysUntilPresents>
@@ -10,5 +8,8 @@
 	<VCE_FestiveFavor_Label>Festive Favor</VCE_FestiveFavor_Label>
 	<VCE_NotDecembary>Not Decembary</VCE_NotDecembary>
 	<VCE_GingerbreadInDecembary>Gingerbread object in Decembary: x2</VCE_GingerbreadInDecembary>
-
+	<VCE_ActivateSnowSpewer>Activate snow spewer</VCE_ActivateSnowSpewer>
+	<VCE_ActivateSnowSpewerDesc>Initiate the snow spewing process, which will gradually lower the local temperature and generate snowfall.</VCE_ActivateSnowSpewerDesc>
+	<VCE_DeactivateSnowSpewer>Stop snow spewer</VCE_DeactivateSnowSpewer>
+	<VCE_DeactivateSnowSpewerDesc>Stop the snow spewing process.</VCE_DeactivateSnowSpewerDesc>
 </LanguageData>

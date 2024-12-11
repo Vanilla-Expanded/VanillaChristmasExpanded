@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VCE_SnowSpewer</defName>
+		<label>snow spewer</label>
+		<description>An advanced climatic manipulator designed for environmental transformation. By extracting atmospheric moisture and seeding it with ultra-cold nano-crystals, the snow spewer blankets entire regions with continuous snowfall, turning any landscape into a frozen wonderland.</description>
+		<graphicData>
+			<texPath>Things/Building/Snowspewer/Snowspewer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>100</Steel>
+			<Plasteel>40</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>18000</WorkToBuild>
+			<Flammability>0</Flammability>
+			<MaxHitPoints>1500</MaxHitPoints>
+		</statBases>
+		<size>(4,4)</size>
+		<designationCategory>Misc</designationCategory>
+		<fillPercent>1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<comps>
+      <li Class="VanillaChristmasExpanded.CompProperties_SnowSpewer"/>
+		</comps>
+		<researchPrerequisites>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+	</ThingDef>
+</Defs>
