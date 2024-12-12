@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <TransportShipDef>
+    <defName>VCE_SantaAerodroneTransportShipDef</defName>
+    <label>crashed present-shipper</label>
+    <shipThing>VCE_SantaAerodrone_Crashed</shipThing>
+    <arrivingSkyfaller>VCE_SantaAerodrone_Crashing</arrivingSkyfaller>
+  </TransportShipDef>
+
+ 
+
+</Defs>

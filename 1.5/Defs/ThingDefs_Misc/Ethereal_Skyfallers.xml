@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ShuttleCrashingSkyfallerBase">
+    <defName>VCE_SantaAerodrone_Crashing</defName>
+    <label>present-shipper</label>
+    <description>A variant of an aerodrone that ships presents across the planet.</description>
+    <graphicData>
+      <texPath>Things/Building/SantaAerodrone/SantaAerodroneSkyfaller</texPath>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

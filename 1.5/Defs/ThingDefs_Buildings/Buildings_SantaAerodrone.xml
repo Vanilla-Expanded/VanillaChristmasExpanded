@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="ShuttleBase">
+		<defName>VCE_SantaAerodrone_Crashed</defName>
+		<label>crashed present-shipper</label>
+		<description>A crashed variant of an aerodrone that ships presents across the planet. All the presents have been destroyed upon crashlanding, but it might be possible to obtain some festive crackers upon deconstructing this wreck. This wreck seems to emit some festive music, and due to some psychic influence, spreads snow around itself.</description>
+		<graphicData>
+			<texPath>Things/Building/SantaAerodrone/SantaAerodroneCrashed</texPath>
+			<drawSize>(6,4)</drawSize>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>800</WorkToBuild>
+		</statBases>
+		<comps Inherit="False"/>
+		<killedLeavings Inherit="False">
+			<Steel>4</Steel>
+			<Plasteel>7</Plasteel>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</killedLeavings>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>70</Plasteel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<building Inherit="False">
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<claimable>false</claimable>
+			<alwaysDeconstructible>true</alwaysDeconstructible>
+		</building>
+	</ThingDef>
+</Defs>

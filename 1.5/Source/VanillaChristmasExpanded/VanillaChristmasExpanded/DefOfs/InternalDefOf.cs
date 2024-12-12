@@ -33,6 +33,7 @@ namespace VanillaChristmasExpanded
         public static ThingDef VCE_Gingerbread;
         public static ThingDef VCE_Snow;
         public static ThingDef VCE_Filth_Water;
+        public static ThingDef VCE_SantaAerodrone_Crashed;
 
         public static StorytellerDef VCE_SantaSeasonal;
 
@@ -63,6 +64,8 @@ namespace VanillaChristmasExpanded
         public static WeatherDef VCE_FestiveSnow;
 
         public static GameConditionDef VCE_ColdSnap;
+
+        public static TransportShipDef VCE_SantaAerodroneTransportShipDef;
 
     }
 }

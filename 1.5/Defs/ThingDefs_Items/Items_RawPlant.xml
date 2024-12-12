@@ -24,6 +24,8 @@
 			<joyKind>Gluttonous</joyKind>
 			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
 		</ingestible>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 		<stuffProps>
 			<color>(130, 77, 38)</color>
 			<categories>
@@ -49,7 +51,9 @@
 				<DoorOpenSpeed>0.75</DoorOpenSpeed>
 				<BedRestEffectiveness>1</BedRestEffectiveness>
 			</statFactors>
+			
 			<canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+			<allowedInStuffGeneration>false</allowedInStuffGeneration>
 		</stuffProps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>
