@@ -12,4 +12,9 @@
 	<VCE_ActivateSnowSpewerDesc>Initiate the snow spewing process, which will gradually lower the local temperature and generate snowfall.</VCE_ActivateSnowSpewerDesc>
 	<VCE_DeactivateSnowSpewer>Stop snow spewer</VCE_DeactivateSnowSpewer>
 	<VCE_DeactivateSnowSpewerDesc>Stop the snow spewing process.</VCE_DeactivateSnowSpewerDesc>
+	<VCE_AerodroneSelfDestructsIn>Aerodrone self-destructs in {0}</VCE_AerodroneSelfDestructsIn>
+	<VCE_LetterLabelAerodroneIncoming>Aerodrone incoming</VCE_LetterLabelAerodroneIncoming>
+	<VCE_LetterTextAerodroneIncoming>An aerodrone is landing nearby.</VCE_LetterTextAerodroneIncoming>
+	<VCE_LetterTextRaidSpacedrone>A raid from {0} has arrived to destroy the {1} that was forced to land nearby.</VCE_LetterTextRaidSpacedrone>
+
 </LanguageData>

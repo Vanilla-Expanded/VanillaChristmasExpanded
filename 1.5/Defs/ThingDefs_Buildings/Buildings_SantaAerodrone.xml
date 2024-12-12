@@ -4,6 +4,7 @@
 		<defName>VCE_SantaAerodrone_Crashed</defName>
 		<label>crashed present-shipper</label>
 		<description>A crashed variant of an aerodrone that ships presents across the planet. All the presents have been destroyed upon crashlanding, but it might be possible to obtain some festive crackers upon deconstructing this wreck. This wreck seems to emit some festive music, and due to some psychic influence, spreads snow around itself.</description>
+		<thingClass>VanillaChristmasExpanded.Aerodrone</thingClass>
 		<graphicData>
 			<texPath>Things/Building/SantaAerodrone/SantaAerodroneCrashed</texPath>
 			<drawSize>(6,4)</drawSize>
@@ -14,7 +15,31 @@
 			<Flammability>1</Flammability>
 			<WorkToBuild>800</WorkToBuild>
 		</statBases>
-		<comps Inherit="False"/>
+		<comps Inherit="False">
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>6</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<wickTicks>1800</wickTicks>
+				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+				<wickMessages>
+				<li>
+					<wickMessagekey>SelfDestructCountdown</wickMessagekey>
+					<messageType>NeutralEvent</messageType>
+					<ticksLeft>1800</ticksLeft><!-- 30 seconds -->
+				</li>
+				<li>
+					<wickMessagekey>SelfDestructCountdown</wickMessagekey>
+					<messageType>NeutralEvent</messageType>
+					<ticksLeft>1200</ticksLeft><!-- 20 seconds -->
+				</li>
+				<li>
+					<wickMessagekey>SelfDestructCountdown</wickMessagekey>
+					<messageType>NeutralEvent</messageType>
+					<ticksLeft>600</ticksLeft><!-- 10 seconds -->
+				</li>
+				</wickMessages>
+			</li>
+		</comps>
 		<killedLeavings Inherit="False">
 			<Steel>4</Steel>
 			<Plasteel>7</Plasteel>

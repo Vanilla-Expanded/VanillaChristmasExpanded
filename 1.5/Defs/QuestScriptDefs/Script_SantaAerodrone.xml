@@ -9,7 +9,7 @@
 			<rulesStrings>
 				<li>questName->[santaAdj] [aerodrone] redirect</li>
 				<li>questName->[aerodrone] [cargo] interception</li>
-				<li>questName>[santaAdj] [cargo] crash</li>
+				<li>questName->[santaAdj] [cargo] crash</li>
 				<li>santaAdj->festive</li>
 				<li>santaAdj->jolly</li>
 				<li>santaAdj->holiday</li>
@@ -45,6 +45,17 @@
 				<li>raidsDescription(allowViolence==false)-></li>
 			</rulesStrings>
 		</questDescriptionRules>
-		<root Class="VanillaChristmasExpanded.QuestNode_SantaAerodrone"/>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_SubScript">
+					<def>Util_RandomizePointsChallengeRating</def>
+					<parms>
+						<pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+						<pointsFactorThreeStar>2</pointsFactorThreeStar>
+					</parms>
+				</li>
+				<li Class="VanillaChristmasExpanded.QuestNode_SantaAerodrone"></li>
+			</nodes>
+		</root>
 	</QuestScriptDef>
 </Defs>

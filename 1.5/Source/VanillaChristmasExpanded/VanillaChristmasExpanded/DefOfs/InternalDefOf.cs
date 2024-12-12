@@ -66,6 +66,7 @@ namespace VanillaChristmasExpanded
         public static GameConditionDef VCE_ColdSnap;
 
         public static TransportShipDef VCE_SantaAerodroneTransportShipDef;
-
+        public static ThingDef VCE_SantaAerodrone_Crashing;
+        public static ThingDef VCE_FestivePresentProjectile;
     }
 }

@@ -101,5 +101,24 @@
 			
 		</modExtensions>
 	</ThingDef>
-	
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>VCE_FestivePresentProjectile</defName>
+		<thingClass>VanillaChristmasExpanded.Projectile_SpawnPresent</thingClass>
+		<label>festive present</label>
+		<graphicData>
+			<texPath>UI/Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			
+			<speed>7</speed>
+			<arcHeightFactor>4</arcHeightFactor>			
+			<spawnsThingDef>VCE_FestivePresent</spawnsThingDef>
+			<tryAdjacentFreeSpaces>True	</tryAdjacentFreeSpaces>
+		  <shadowSize>0.6</shadowSize>
+		  <screenShakeFactor>0.5</screenShakeFactor>
+		</projectile>
+	</ThingDef>
 </Defs>
