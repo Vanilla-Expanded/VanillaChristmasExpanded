@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
-  <SoundDef>
-    <defName>VCE_ConfettiExplosion</defName>  
-    <context>MapOnly</context>
-    <maxSimultaneous>1</maxSimultaneous>  
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Clip">
-            <clipPath>Confetti/ConfettiCheer_SoundEffect</clipPath>
-          </li>
-        </grains>
-        <volumeRange>30~30</volumeRange>
-      </li>
-    </subSounds>
-  </SoundDef>
+	<SoundDef>
+		<defName>VCE_ConfettiExplosion</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Confetti/ConfettiCheer_SoundEffect</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~30</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>VCE_Snow</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Snow/Snow</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~30</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>
