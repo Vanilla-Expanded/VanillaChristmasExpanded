@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>VCE_Megareindeer</defName>
+		<label>megareindeer</label>
+		<description>A colossal, herd-dwelling herbivore adapted to the harshest cold environments. The megareindeer boasts enormous, intricately branched antlers used for both display and defense. Originally engineered for arctic survival, it serves as a robust pack animal, capable of carrying heavy loads across frozen landscapes. Its thick, insulated fur is prized for crafting warm clothing. Generally docile, the megareindeer will fiercely maul enemies with its massive antlers if threatened.</description>
+		<statBases>
+			<MoveSpeed>4.8</MoveSpeed>
+			<MarketValue>700</MarketValue>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<FilthRate>16</FilthRate>
+			<CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+		</statBases>
+		<uiIconScale>2</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>Milk</milkDef>
+				<milkIntervalDays>2</milkIntervalDays>
+				<milkAmount>28</milkAmount>
+			</li>
+		</comps>
+		<race>
+			<wildBiomes>
+				<Tundra>0.2</Tundra>
+				<ColdBog>0.1</ColdBog>
+				<BorealForest>0.1</BorealForest>
+			</wildBiomes>
+			<body>QuadrupedAnimalWithHooves</body>
+			<herdAnimal>true</herdAnimal>
+			<packAnimal>true</packAnimal>
+			<baseBodySize>4.0</baseBodySize>
+			<baseHealthScale>3.6</baseHealthScale>
+			<baseHungerRate>1.1</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Plain</leatherDef>
+			<wildness>0.75</wildness>
+			<roamMtbDays>2</roamMtbDays>
+			<mateMtbHours>12</mateMtbHours>
+			<trainability>Advanced</trainability>
+			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<gestationPeriodDays>6.66</gestationPeriodDays>
+			<lifeExpectancy>32</lifeExpectancy>
+			<useMeatFrom>Caribou</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.2</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.3</minAge>
+					<soundWounded>Pawn_Elk_Wounded</soundWounded>
+					<soundDeath>Pawn_Elk_Death</soundDeath>
+					<soundCall>Pawn_Elk_Call</soundCall>
+					<soundAngry>Pawn_Elk_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<soundEating>Herbivore_Eat</soundEating>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.1)</li>
+				<li>(0.16, 0, 0.03)</li>
+				<li>(0.0, 0, -0.02)</li>
+				<li>(-0.16, 0, 0.03)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			
+		</tradeTags>
+		<tools>
+			<li>
+				<label>left hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.15</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.15</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.15</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hoof</label>
+				<labelNoLocation>hoof</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<armorPenetration>0.15</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<armorPenetration>0.15</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>22</power>
+				<armorPenetration>0.19</armorPenetration>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VCE_Megareindeer</defName>
+		<label>megareindeer</label>
+		<race>VCE_Megareindeer</race>
+		<combatPower>280</combatPower>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<wildGroupSize>3~9</wildGroupSize>
+		<lifeStages>
+			<li>
+				<label>megareindeer calf</label>
+				<labelPlural>megareindeer calves</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale</texPath>
+					<drawSize>1.8</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale_Dessicated</texPath>
+					<drawSize>1.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerMale</texPath>
+					<drawSize>2.6</drawSize>
+					<shadowData>
+						<volume>(0.375, 0.375, 0.375)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<femaleGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale</texPath>
+					<drawSize>2.4</drawSize>
+					<shadowData>
+						<volume>(0.375, 0.375, 0.375)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</femaleGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerMale_Dessicated</texPath>
+					<drawSize>2.6</drawSize>
+				</dessicatedBodyGraphicData>
+				<femaleDessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elk/MegareindeerFemale_Dessicated</texPath>
+					<drawSize>2.4</drawSize>
+				</femaleDessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerMale</texPath>
+					<drawSize>3.8</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<femaleGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale</texPath>
+					<drawSize>3.5</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</femaleGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerMale_Dessicated</texPath>
+					<drawSize>3.8</drawSize>
+				</dessicatedBodyGraphicData>
+				<femaleDessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale_Dessicated</texPath>
+					<drawSize>3.5</drawSize>
+				</femaleDessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
