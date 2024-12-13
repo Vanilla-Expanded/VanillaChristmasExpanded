@@ -11,6 +11,7 @@ namespace VanillaChristmasExpanded
     {
        
         public bool active = false;
+        public SnowSpewer_SteamSprayer sprayer;
 
         new public CompProperties_SnowSpewer Props => (CompProperties_SnowSpewer)props;
 
@@ -29,7 +30,22 @@ namespace VanillaChristmasExpanded
            
         }
 
-       
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            sprayer = new SnowSpewer_SteamSprayer(this.parent);
+        }
+
+        public override void CompTick()
+        {
+            base.CompTick();
+            if (active)
+            {
+                sprayer.SteamSprayerTick();
+            }
+        }
+
+
 
 
 
