@@ -3,7 +3,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>VCE_FestiveCracker</defName>
 		<label>festive cracker</label>
-		<description>A delicious preparation of cocoa seeds ground together with sugar and vanilla. Very pleasurable to eat, but not very nutritious.</description>
+		<description>A small package of plastic waste and candy. When pulled apart, sprays confetti, bringing festive joy to everyone.</description>
 		<graphicData>
 			<texPath>Things/Item/FestiveCracker</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
