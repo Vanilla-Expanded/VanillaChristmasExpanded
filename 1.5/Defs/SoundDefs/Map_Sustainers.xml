@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SoundDef>
+		<defName>VCE_JukeboxSongs</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<maxSimultaneous>1</maxSimultaneous>
+		<maxVoices>1</maxVoices>
+		<subSounds>
+			<li>
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				<muteWhenPaused>True</muteWhenPaused>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Jukebox</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>200</volumeRange>
+				<distRange>5~20</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>
