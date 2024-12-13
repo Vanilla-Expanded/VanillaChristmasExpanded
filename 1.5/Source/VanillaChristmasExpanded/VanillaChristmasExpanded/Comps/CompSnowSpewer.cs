@@ -9,12 +9,13 @@ namespace VanillaChristmasExpanded
 
     public class CompSnowSpewer : ThingComp
     {
-       
+
         public bool active = false;
+        public SnowSpewer_SteamSprayer sprayer;
 
         new public CompProperties_SnowSpewer Props => (CompProperties_SnowSpewer)props;
 
-       
+
 
         public override void PostExposeData()
         {
@@ -26,10 +27,25 @@ namespace VanillaChristmasExpanded
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
-           
+
         }
 
-       
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            sprayer = new SnowSpewer_SteamSprayer(this.parent);
+        }
+
+        public override void CompTick()
+        {
+            base.CompTick();
+            if (active)
+            {
+                sprayer.SteamSprayerTick();
+            }
+        }
+
+
 
 
 
@@ -46,7 +62,7 @@ namespace VanillaChristmasExpanded
                 command_Action.defaultDesc = "VCE_DeactivateSnowSpewerDesc".Translate();
                 command_Action.defaultLabel = "VCE_DeactivateSnowSpewer".Translate();
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Snowspewer_Deactivate", true);
-               
+
                 command_Action.action = delegate
                 {
                     active = false;
@@ -65,13 +81,13 @@ namespace VanillaChristmasExpanded
                 {
                     active = true;
                     SnowSpewerComponent.Instance.Activate(this.parent.Map);
-                  
+
                 };
 
             }
 
 
-            
+
 
 
             yield return command_Action;

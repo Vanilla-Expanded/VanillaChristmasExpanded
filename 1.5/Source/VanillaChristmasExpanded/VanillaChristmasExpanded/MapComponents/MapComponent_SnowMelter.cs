@@ -4,6 +4,7 @@ using Verse;
 using UnityEngine;
 using System.Collections.Generic;
 using Mono.Unix.Native;
+using System.Linq;
 
 
 
@@ -31,31 +32,34 @@ namespace VanillaChristmasExpanded
             if ((tickCounter > tickInterval))
             {
 
-                List<Building> colonyBuildings = this.map.listerBuildings.allBuildingsColonist;
+                List<Thing> colonyThings = this.map.listerThings.AllThings.Where(x => x.Stuff == InternalDefOf.VCE_Snow).ToList();
 
 
 
 
-                foreach (Building building in colonyBuildings)
+                foreach (Thing thing in colonyThings)
                 {
-                    if (building.Stuff == InternalDefOf.VCE_Snow)
+                    if (thing.Map != null && thing.Position.InBounds(thing.Map))
                     {
-
-                        float ambientTemperature = building.AmbientTemperature;
-                        if (!(ambientTemperature < 0f))
+                        float ambientTemperature = thing.AmbientTemperature;
+                        if (ambientTemperature > 0f)
                         {
                             int num = GenMath.RoundRandom(0.15f * (ambientTemperature / 10f));
                             if (num > 0)
                             {
-                                building.TakeDamage(new DamageInfo(DamageDefOf.Rotting, num));
+                                thing.TakeDamage(new DamageInfo(DamageDefOf.Rotting, num));
                                 IntVec3 c;
-                                CellFinder.TryFindRandomReachableCellNearPosition(building.Position, building.Position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out c);
+                                CellFinder.TryFindRandomReachableCellNearPosition(thing.Position, thing.Position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out c);
                                 FilthMaker.TryMakeFilth(c, map, InternalDefOf.VCE_Filth_Water);
                             }
                         }
-
                     }
+
+
+
                 }
+
+
 
 
                 tickCounter = 0;
