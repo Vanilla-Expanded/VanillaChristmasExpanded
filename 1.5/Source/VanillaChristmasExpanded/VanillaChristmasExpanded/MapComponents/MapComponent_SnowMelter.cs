@@ -50,7 +50,11 @@ namespace VanillaChristmasExpanded
                                 thing.TakeDamage(new DamageInfo(DamageDefOf.Rotting, num));
                                 IntVec3 c;
                                 CellFinder.TryFindRandomReachableCellNearPosition(thing.Position, thing.Position, map, 2, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Deadly, false), null, null, out c);
-                                FilthMaker.TryMakeFilth(c, map, InternalDefOf.VCE_Filth_Water);
+                                if (c.InBounds(map))
+                                {
+                                    FilthMaker.TryMakeFilth(c, map, InternalDefOf.VCE_Filth_Water);
+                                }
+                                
                             }
                         }
                     }
