@@ -9,6 +9,8 @@
 		<graphicData>
 			<texPath>Things/Item/Resources/Gingerbread</texPath>
 		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 		<statBases>
 			<MarketValue>1.7</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -50,6 +52,7 @@
 				<BedRestEffectiveness>1</BedRestEffectiveness>
 			</statFactors>
 			<canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+			<allowedInStuffGeneration>false</allowedInStuffGeneration>
 		</stuffProps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>

@@ -31,6 +31,8 @@ namespace VanillaChristmasExpanded
         public static ThingDef VCE_FestiveCracker;
         public static ThingDef VCE_GingerRoot;
         public static ThingDef VCE_Gingerbread;
+        public static ThingDef VCE_Snow;
+        public static ThingDef VCE_Filth_Water;
 
         public static StorytellerDef VCE_SantaSeasonal;
 
