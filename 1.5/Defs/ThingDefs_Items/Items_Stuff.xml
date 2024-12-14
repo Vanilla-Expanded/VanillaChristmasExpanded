@@ -64,10 +64,6 @@
 		</stuffProps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<allowedArchonexusCount>1000</allowedArchonexusCount>
-		<comps>
-			<li>
-				<compClass>CompMelter</compClass>
-			</li>
-		</comps>
+		
 	</ThingDef>
 </Defs>
