@@ -1,18 +1,24 @@
 using System.Collections.Generic;
+using System.Text;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
 namespace VanillaChristmasExpanded
 {
+	[HotSwappable]
 	public class Aerodrone : Building
 	{
 		public FloatRange presentsToEject;
+		private int ticksSinceSpawn;
+		private const float MAX_RADIUS = 6f;
+		private const int TOTAL_HOURS = 24;
 		public override void SpawnSetup(Map map, bool respawningAfterLoad)
 		{
 			base.SpawnSetup(map, respawningAfterLoad);
 			if (!respawningAfterLoad)
 			{
+				ticksSinceSpawn = 0;
 				var amount = presentsToEject.RandomInRange;
 				for (int i = 0; i < amount; i++)
 				{
@@ -33,6 +39,52 @@ namespace VanillaChristmasExpanded
 		{
 			base.ExposeData();
 			Scribe_Values.Look(ref presentsToEject, "presentsToEject");
+			Scribe_Values.Look(ref ticksSinceSpawn, "ticksSinceSpawn", 0);
+		}
+
+		public override void Tick()
+		{
+			base.Tick();
+			if (Spawned)
+			{
+				ticksSinceSpawn++;
+				if (Find.TickManager.TicksGame % 60 == 0)
+				{
+					SpreadSnow();
+				}
+			}
+		}
+
+		public override void DrawExtraSelectionOverlays()
+		{
+			base.DrawExtraSelectionOverlays();
+			GenDraw.DrawRadiusRing(Position, MAX_RADIUS);
+		}
+
+		private void SpreadSnow()
+		{
+			float hoursElapsed = (float)ticksSinceSpawn / 2500f;
+			float currentRadius = Mathf.Min(MAX_RADIUS, (hoursElapsed / (float)TOTAL_HOURS) * MAX_RADIUS);
+
+			IEnumerable<IntVec3> cellsInRadius = GenRadial.RadialCellsAround(Position, currentRadius, true);
+			foreach (IntVec3 cell in cellsInRadius)
+			{
+				if (cell.InBounds(Map))
+				{
+					float distanceFromCenter = cell.DistanceTo(Position);
+					if (distanceFromCenter <= currentRadius)
+					{
+						Map.snowGrid.AddDepth(cell, 1f);
+					}
+				}
+			}
+		}
+
+		public override string GetInspectString()
+		{
+			var baseString = new StringBuilder(base.GetInspectString());
+			baseString.AppendLine("VCE_SnowSpreadRadius".Translate(MAX_RADIUS.ToString()));
+			return baseString.ToString();
 		}
 	}
 
@@ -40,8 +92,8 @@ namespace VanillaChristmasExpanded
 	{
 		public override Graphic Graphic => present.Graphic;
 
-        public override Material DrawMat => Graphic.MatSingleFor(this);
-        public FestivePresent present;
+		public override Material DrawMat => Graphic.MatSingleFor(this);
+		public FestivePresent present;
 		protected override void Impact(Thing hitThing, bool blockedByShield = false)
 		{
 			Map map = this.Map;

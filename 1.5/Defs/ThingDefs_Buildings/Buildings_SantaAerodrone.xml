@@ -5,6 +5,7 @@
 		<label>crashed present-shipper</label>
 		<description>A crashed variant of an aerodrone that ships presents across the planet. All the presents have been destroyed upon crashlanding, but it might be possible to obtain some festive crackers upon deconstructing this wreck. This wreck seems to emit some festive music, and due to some psychic influence, spreads snow around itself.</description>
 		<thingClass>VanillaChristmasExpanded.Aerodrone</thingClass>
+		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Building/SantaAerodrone/SantaAerodroneCrashed</texPath>
 			<drawSize>(6,4)</drawSize>
