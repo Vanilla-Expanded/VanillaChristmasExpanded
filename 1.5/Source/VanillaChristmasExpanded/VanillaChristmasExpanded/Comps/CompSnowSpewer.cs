@@ -45,6 +45,21 @@ namespace VanillaChristmasExpanded
             }
         }
 
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+
+            if (active)
+            {
+              
+                    active = false;
+                    SnowSpewerComponent.Instance.Deactivate(this.parent.Map);
+                    this.parent.Map.weatherManager.TransitionTo(WeatherDefOf.Clear);
+              
+
+            }
+        }
+
 
 
 
