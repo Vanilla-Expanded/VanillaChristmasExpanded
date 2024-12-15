@@ -16,5 +16,7 @@
 	<VCE_LetterLabelAerodroneIncoming>Aerodrone incoming</VCE_LetterLabelAerodroneIncoming>
 	<VCE_LetterTextAerodroneIncoming>An aerodrone is landing nearby.</VCE_LetterTextAerodroneIncoming>
 	<VCE_LetterTextRaidSpacedrone>A raid from {0} has arrived to destroy the {1} that was forced to land nearby.</VCE_LetterTextRaidSpacedrone>
-
+	<VCE_QuestPartRaidsDelay>Raids arriving in {0}</VCE_QuestPartRaidsDelay>
+	<VCE_QuestPartRaidsDelayDesc>Raids will start arriving in {0}.\n\nThe raiders will target the aerodrone and attempt to destroy it.</VCE_QuestPartRaidsDelayDesc>
+	<VCE_SnowSpreadRadius>Snow spread radius: {0}</VCE_SnowSpreadRadius>
 </LanguageData>
