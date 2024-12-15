@@ -35,7 +35,6 @@ namespace VanillaChristmasExpanded
             }
             return false;
         }
-
         public static void ThrowExtendedAirPuffUp(Vector3 loc, Map map, float size, float speedMultiplier)
         {
             if (loc.ToIntVec3().ShouldSpawnMotesAt(map))
@@ -47,6 +46,5 @@ namespace VanillaChristmasExpanded
                 map.flecks.CreateFleck(dataStatic);
             }
         }
-
     }
 }

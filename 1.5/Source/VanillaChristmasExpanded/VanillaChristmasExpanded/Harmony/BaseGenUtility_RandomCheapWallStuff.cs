@@ -24,7 +24,7 @@ namespace VanillaChristmasExpanded
         {
             if (__result != null)
             {
-                if (__result==InternalDefOf.VCE_Gingerbread || __result == InternalDefOf.VCE_Snow)
+                if (__result == InternalDefOf.VCE_Gingerbread || __result == InternalDefOf.VCE_Snow)
                 {
 
                     __result = ThingDefOf.BlocksGranite;

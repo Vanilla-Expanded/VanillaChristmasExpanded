@@ -39,7 +39,7 @@ namespace VanillaChristmasExpanded
 
                 foreach (Thing thing in colonyThings)
                 {
-                    if(thing.Map!=null&& thing.Position.InBounds(thing.Map))
+                    if (thing.Map != null && thing.Position.InBounds(thing.Map))
                     {
                         float ambientTemperature = thing.AmbientTemperature;
                         if (ambientTemperature > 0f)
@@ -57,12 +57,12 @@ namespace VanillaChristmasExpanded
                             }
                         }
                     }
-                        
 
-                    
+
+
                 }
 
-               
+
 
 
                 tickCounter = 0;

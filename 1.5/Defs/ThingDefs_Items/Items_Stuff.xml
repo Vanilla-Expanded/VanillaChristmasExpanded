@@ -48,7 +48,7 @@
 			<soundImpactMelee>VCE_Snow</soundImpactMelee>
 			<statOffsets>
         
-      </statOffsets>
+			</statOffsets>
 			<statFactors>
 				<WorkToMake>0.8</WorkToMake>
 				<WorkToBuild>2</WorkToBuild>
