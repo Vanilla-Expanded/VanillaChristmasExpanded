@@ -75,8 +75,8 @@ namespace VanillaChristmasExpanded
 				quest.AddPart(questPart_FactionGoodwillLocked);
 				QuestPart_Delay questPart_Delay = new QuestPart_Delay();
 				questPart_Delay.delayTicks = RaidDelayTicksRange.RandomInRange;
-				questPart_Delay.alertLabel = "QuestPartRaidsDelay".Translate();
-				questPart_Delay.alertExplanation = "QuestPartRaidsDelayDesc".Translate();
+				questPart_Delay.alertLabel = "VCE_QuestPartRaidsDelay".Translate();
+				questPart_Delay.alertExplanation = "VCE_QuestPartRaidsDelayDesc".Translate();
 				questPart_Delay.ticksLeftAlertCritical = 60000;
 				questPart_Delay.inSignalEnable = QuestGen.slate.Get<string>("inSignal");
 				questPart_Delay.alertCulprits.Add(aeroDrone);
@@ -125,6 +125,7 @@ namespace VanillaChristmasExpanded
 
 			quest.End(QuestEndOutcome.Fail, 0, null, text3, QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);
 			quest.End(QuestEndOutcome.Success, 0, null, text2, QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);
+			quest.End(QuestEndOutcome.Success, 0, null, aeroDroneDestroyedSignal, QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);
 			slate.Set("map", map);
 			slate.Set("aeroDrone", aeroDrone);
 			slate.Set("raidIntervalAvg", RaidIntervalTicksRange.Average);

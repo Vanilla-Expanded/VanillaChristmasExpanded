@@ -57,6 +57,7 @@
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 			<claimable>false</claimable>
 			<alwaysDeconstructible>true</alwaysDeconstructible>
+			<soundAmbient>VCE_PresentShipper_Ambience</soundAmbient>
 		</building>
 	</ThingDef>
 </Defs>
