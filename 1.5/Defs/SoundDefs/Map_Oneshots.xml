@@ -30,4 +30,24 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	
+  <SoundDef>
+    <defName>VCE_PresentShipper_Ambience</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>PresentShipper/PresentShipperAmbience_Sustainer_01</clipPath>
+          </li>
+        </grains>
+        <volumeRange>45</volumeRange>
+        <distRange>15~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
 </Defs>
