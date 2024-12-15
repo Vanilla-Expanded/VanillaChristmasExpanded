@@ -11,7 +11,7 @@ namespace VanillaChristmasExpanded
 	{
 		public FloatRange presentsToEject;
 		private int ticksSinceSpawn;
-		private const float MAX_RADIUS = 6f;
+		private const float MAX_RADIUS = 100f;
 		private const int TOTAL_HOURS = 24;
 		public override void SpawnSetup(Map map, bool respawningAfterLoad)
 		{
@@ -53,12 +53,6 @@ namespace VanillaChristmasExpanded
 					SpreadSnow();
 				}
 			}
-		}
-
-		public override void DrawExtraSelectionOverlays()
-		{
-			base.DrawExtraSelectionOverlays();
-			GenDraw.DrawRadiusRing(Position, MAX_RADIUS);
 		}
 
 		private void SpreadSnow()
