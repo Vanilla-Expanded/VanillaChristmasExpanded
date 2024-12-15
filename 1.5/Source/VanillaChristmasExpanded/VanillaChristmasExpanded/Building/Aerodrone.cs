@@ -78,7 +78,7 @@ namespace VanillaChristmasExpanded
 		{
 			var baseString = new StringBuilder(base.GetInspectString());
 			baseString.AppendLine("VCE_SnowSpreadRadius".Translate(MAX_RADIUS.ToString()));
-			return baseString.ToString();
+			return baseString.ToString().TrimEndNewlines();
 		}
 	}
 
