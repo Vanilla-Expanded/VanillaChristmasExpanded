@@ -10,7 +10,7 @@
 		<designationCategory>Floors</designationCategory>
 		<selectable>true</selectable>
 		<useHitPoints>true</useHitPoints>
-		<defaultPlacingRot>South</defaultPlacingRot>
+		<defaultPlacingRot>North</defaultPlacingRot>
 		<blocksAltitudes>
 			<li>FloorCoverings</li>
 		</blocksAltitudes>
@@ -20,6 +20,22 @@
 			<paintable>true</paintable>
   
 		</building>
+		 <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>1</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>1</weight>
+          <only>(0.7,0.1,0.1)</only>
+        </li>
+        <li>
+          <weight>1</weight>
+          <only>(0.1,0.7,0.1)</only>
+        </li>
+      </options>
+    </colorGenerator>
 	</ThingDef>
 	<ThingDef Abstract="True" Name="VCE_BuildingFloorCoveringMediumBase" ParentName="VCE_BuildingFloorCoveringBase">
 		<size>(3,3)</size>
