@@ -53,8 +53,8 @@ namespace VanillaChristmasExpanded
             {
               
                     active = false;
-                    SnowSpewerComponent.Instance.Deactivate(this.parent.Map);
-                    this.parent.Map.weatherManager.TransitionTo(WeatherDefOf.Clear);
+                    SnowSpewerComponent.Instance.Deactivate(previousMap);
+                    previousMap.weatherManager.TransitionTo(WeatherDefOf.Clear);
               
 
             }
