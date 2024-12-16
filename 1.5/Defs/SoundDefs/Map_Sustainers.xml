@@ -9,7 +9,7 @@
 		<maxVoices>1</maxVoices>
 		<subSounds>
 			<li>
-				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				
 				<muteWhenPaused>True</muteWhenPaused>
 				<grains>
 					<li Class="AudioGrain_Folder">
@@ -17,7 +17,7 @@
 					</li>
 				</grains>
 				<volumeRange>300</volumeRange>
-				<distRange>5~20</distRange>
+				<distRange>1~200</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>
