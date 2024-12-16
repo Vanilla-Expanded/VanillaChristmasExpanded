@@ -32,7 +32,7 @@ namespace VanillaChristmasExpanded
             if ((tickCounter > tickInterval))
             {
 
-                List<Thing> colonyThings = this.map.listerThings.AllThings.Where(x => x.def== InternalDefOf.VCE_Snow|| x.Stuff == InternalDefOf.VCE_Snow).ToList();
+                List<Thing> colonyThings = this.map.listerThings.AllThings.Where(x => x.def == InternalDefOf.VCE_SnowSculpture || x.def== InternalDefOf.VCE_Snow|| x.Stuff == InternalDefOf.VCE_Snow).ToList();
 
 
 
