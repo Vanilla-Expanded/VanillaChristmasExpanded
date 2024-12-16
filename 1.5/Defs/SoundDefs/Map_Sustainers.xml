@@ -16,8 +16,8 @@
 						<clipFolderPath>Jukebox</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>300</volumeRange>
-				<distRange>1~200</distRange>
+				<volumeRange>200</volumeRange>
+				<distRange>10~38</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>
