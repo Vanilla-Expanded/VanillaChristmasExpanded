@@ -11,9 +11,9 @@
       <Cleanliness>-5</Cleanliness>
     </statBases>
     <graphicData>
-      <texPath>Things/Filth/WaterPuddleA</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2</drawSize>
+      <texPath>Things/Filth/WaterPuddle</texPath>
+     
+     
     </graphicData>
     <filth>
       <disappearsInDays>3~5</disappearsInDays>

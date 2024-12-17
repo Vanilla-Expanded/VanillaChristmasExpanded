@@ -35,6 +35,7 @@ namespace VanillaChristmasExpanded
         public static ThingDef VCE_Filth_Water;
         public static ThingDef VCE_SantaAerodrone_Crashed;
         public static ThingDef VCE_FestiveJukebox;
+        public static ThingDef VCE_SnowSculpture;
 
         public static StorytellerDef VCE_SantaSeasonal;
 

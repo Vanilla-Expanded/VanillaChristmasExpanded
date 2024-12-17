@@ -13,7 +13,7 @@ namespace VanillaChristmasExpanded
 
         public static void Postfix(ref bool __result, Thing t)
         {
-            if (t.Stuff==InternalDefOf.VCE_Snow) { __result = false; }
+            if (t.def == InternalDefOf.VCE_SnowSculpture || t.Stuff==InternalDefOf.VCE_Snow) { __result = false; }
 
 
         }
