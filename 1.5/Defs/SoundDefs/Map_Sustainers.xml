@@ -9,15 +9,15 @@
 		<maxVoices>1</maxVoices>
 		<subSounds>
 			<li>
-				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				
 				<muteWhenPaused>True</muteWhenPaused>
 				<grains>
 					<li Class="AudioGrain_Folder">
 						<clipFolderPath>Jukebox</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>300</volumeRange>
-				<distRange>5~20</distRange>
+				<volumeRange>200</volumeRange>
+				<distRange>10~38</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>
