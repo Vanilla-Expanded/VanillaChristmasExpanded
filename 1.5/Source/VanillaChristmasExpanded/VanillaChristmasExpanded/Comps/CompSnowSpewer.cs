@@ -51,11 +51,11 @@ namespace VanillaChristmasExpanded
 
             if (active)
             {
-
-                active = false;
-                SnowSpewerComponent.Instance.Deactivate(previousMap);
-                previousMap.weatherManager.TransitionTo(WeatherDefOf.Clear);
-
+              
+                    active = false;
+                    SnowSpewerComponent.Instance.Deactivate(previousMap);
+                    previousMap.weatherManager.TransitionTo(WeatherDefOf.Clear);
+              
 
             }
         }
