@@ -3,6 +3,7 @@
 	<ThingDef ParentName="ConditionCauserBase">
 		<defName>VCE_SnowSpewer_Causer</defName>
 		<label>snow spewer</label>
+	
 		<description>An advanced climatic manipulator designed for environmental transformation. By extracting atmospheric moisture and seeding it with ultra-cold nano-crystals, the snow spewer blankets entire regions with continuous snowfall, turning any landscape into a frozen wonderland.</description>
 		<size>(4,4)</size>
 		<graphicData>
@@ -18,6 +19,7 @@
 				<conditionDef>VCE_ColdSnap</conditionDef>
 				<worldRange>10</worldRange>
 			</li>
+			 <li Class="VanillaChristmasExpanded.CompProperties_SnowSpewerConditionCauser"/>
 		</comps>
 	</ThingDef>
 	<SitePartDef ParentName="ConditionCauserSitePartBase">
