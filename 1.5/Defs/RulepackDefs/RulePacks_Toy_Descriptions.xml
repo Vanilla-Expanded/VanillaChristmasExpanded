@@ -10,30 +10,30 @@
 	  
       <!-- General Description -->
       <li>toy_description_group->[woodtoy_clause]. [play_description_group]</li>
-      <li>toy_description_group->[woodtoy_clause] [toy_conjunction] [woodtoy_extra_clause].</li>
+      <li>toy_description_group->[woodtoy_clause] [toy_conjunction]. [woodtoy_extra_clause].</li>
       <li>toy_description_group->[woodtoy_clause] [toy_conjunction].</li>
       <li>toy_description_group->[woodtoy_extra_clause]. [play_description_group]</li>
 
       <!-- Conjunctions -->
       <li>toy_conjunction(p=6)-></li>
-      <li>toy_conjunction->adding a touch of nostalgia,</li>
-      <li>toy_conjunction->highlighting the craftsmanship,</li>
-      <li>toy_conjunction->with a sense of simplicity,</li>
-      <li>toy_conjunction->giving it a rustic charm,</li>
-      <li>toy_conjunction->revealing a story untold,</li>
-      <li>toy_conjunction->hinting at the passage of time,</li>
-      <li>toy_conjunction->while sparking the imagination,</li>
-      <li>toy_conjunction->with an air of timelessness,</li>
-      <li>toy_conjunction->evoking a sense of wonder,</li>
+      <li>toy_conjunction->adding a touch of nostalgia</li>
+      <li>toy_conjunction->highlighting the craftsmanship</li>
+      <li>toy_conjunction->with a sense of simplicity</li>
+      <li>toy_conjunction->giving it a rustic charm</li>
+      <li>toy_conjunction->revealing a story untold</li>
+      <li>toy_conjunction->hinting at the passage of time</li>
+      <li>toy_conjunction->while sparking the imagination</li>
+      <li>toy_conjunction->with an air of timelessness</li>
+      <li>toy_conjunction->evoking a sense of wonder</li>
 
       <!-- Wood Toy Clauses -->
-      <li>woodtoy_clause->the surface is [surface_texture] and [surface_markings]</li>
-      <li>woodtoy_clause->its edges are [edge_quality], blending into [form_quality]</li>
-      <li>woodtoy_clause->the grain of the wood runs [grain_quality], giving it [visual_tone]</li>
-      <li>woodtoy_clause->small [imperfections] in the wood make it feel [emotive_descriptor]</li>
+      <li>woodtoy_clause->the surface of this toy is [surface_texture] and [surface_markings]</li>
+      <li>woodtoy_clause->its edges of this toy are [edge_quality], blending into [form_quality]</li>
+      <li>woodtoy_clause->the grain of the wood runs [grain_quality], giving this toy [visual_tone]</li>
+      <li>woodtoy_clause->small [imperfections] in the wood make this toy feel [emotive_descriptor]</li>
       <li>woodtoy_clause->the toy's balance feels [balance_descriptor], inviting [action_descriptor]</li>
       <li>woodtoy_clause->faint [smell_descriptor] lingers on the wood, adding to its charm</li>
-      <li>woodtoy_clause->the design is both [design_quality] and [emotional_tone]</li>
+      <li>woodtoy_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
       <li>woodtoy_extra_clause->subtle traces of [use_quality] mark its surface</li>
@@ -264,29 +264,29 @@
 	  
       <!-- General Description -->
       <li>toy_description_group->[metaltoy_clause]. [play_description_group]</li>
-      <li>toy_description_group->[metaltoy_clause] [toy_conjunction] [metaltoy_extra_clause].</li>
+      <li>toy_description_group->[metaltoy_clause] [toy_conjunction]. [metaltoy_extra_clause].</li>
       <li>toy_description_group->[metaltoy_clause] [toy_conjunction].</li>
       <li>toy_description_group->[metaltoy_extra_clause]. [play_description_group]</li>
 
       <!-- Conjunctions -->
       <li>toy_conjunction(p=6)-></li>
-      <li>toy_conjunction->reflecting a sense of nostalgia,</li>
-      <li>toy_conjunction->gleaming with precision,</li>
-      <li>toy_conjunction->with a sturdy craftsmanship,</li>
-      <li>toy_conjunction->highlighting its timeless appeal,</li>
-      <li>toy_conjunction->hinting at journeys untold,</li>
-      <li>toy_conjunction->with a playful elegance,</li>
-      <li>toy_conjunction->inviting exploration,</li>
-      <li>toy_conjunction->evoking a sense of wonder,</li>
+      <li>toy_conjunction->reflecting a sense of nostalgia</li>
+      <li>toy_conjunction->gleaming with precision</li>
+      <li>toy_conjunction->with a sturdy craftsmanship</li>
+      <li>toy_conjunction->highlighting its timeless appeal</li>
+      <li>toy_conjunction->hinting at journeys untold</li>
+      <li>toy_conjunction->with a playful elegance</li>
+      <li>toy_conjunction->inviting exploration</li>
+      <li>toy_conjunction->evoking a sense of wonder</li>
 
       <!-- Metal Toy Clauses -->
-      <li>metaltoy_clause->the surface is [metal_texture] and [metal_markings]</li>
-      <li>metaltoy_clause->its edges are [edge_quality], blending into [form_quality]</li>
-      <li>metaltoy_clause->the metal finish is [finish_quality], giving it [visual_tone]</li>
-      <li>metaltoy_clause->tiny [imperfections] in the metal make it feel [emotive_descriptor]</li>
+      <li>metaltoy_clause->the surface of this toy is [metal_texture] and [metal_markings]</li>
+      <li>metaltoy_clause->its edges of the toy are [edge_quality], blending into [form_quality]</li>
+      <li>metaltoy_clause->the metal finish on this toy is [finish_quality], giving it [visual_tone]</li>
+      <li>metaltoy_clause->tiny [imperfections] in the metal make this toy feel [emotive_descriptor]</li>
       <li>metaltoy_clause->the toy's balance feels [balance_descriptor], encouraging [action_descriptor]</li>
-      <li>metaltoy_clause->faint [sound_effect] echoes when it moves, adding to its charm</li>
-      <li>metaltoy_clause->the design is both [design_quality] and [emotional_tone]</li>
+      <li>metaltoy_clause->faint [sound_effect] echoes when this toy moves, adding to its charm</li>
+      <li>metaltoy_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
       <li>metaltoy_extra_clause->subtle [use_quality] marks its surface</li>
@@ -449,29 +449,29 @@
 
       <!-- General Description -->
       <li>plushie_description_group->[plushie_clause]. [play_description_group]</li>
-      <li>plushie_description_group->[plushie_clause] [toy_conjunction] [plushie_extra_clause].</li>
+      <li>plushie_description_group->[plushie_clause] [toy_conjunction]. [plushie_extra_clause].</li>
       <li>plushie_description_group->[plushie_clause] [toy_conjunction].</li>
       <li>plushie_description_group->[plushie_extra_clause]. [play_description_group]</li>
 
       <!-- Conjunctions -->
       <li>toy_conjunction(p=6)-></li>
-      <li>toy_conjunction->bringing a sense of comfort,</li>
-      <li>toy_conjunction->with an irresistible charm,</li>
-      <li>toy_conjunction->inviting endless cuddles,</li>
-      <li>toy_conjunction->with a softness that soothes,</li>
-      <li>toy_conjunction->bringing back childhood memories,</li>
-      <li>toy_conjunction->carrying a touch of whimsy,</li>
-      <li>toy_conjunction->with a playful warmth,</li>
-      <li>toy_conjunction->sparkling a sense of imagination,</li>
+      <li>toy_conjunction->bringing a sense of comfort</li>
+      <li>toy_conjunction->with an irresistible charm</li>
+      <li>toy_conjunction->inviting endless cuddles</li>
+      <li>toy_conjunction->with a softness that soothes</li>
+      <li>toy_conjunction->bringing back childhood memories</li>
+      <li>toy_conjunction->carrying a touch of whimsy</li>
+      <li>toy_conjunction->with a playful warmth</li>
+      <li>toy_conjunction->sparkling a sense of imagination</li>
 
       <!-- Plushie Toy Clauses -->
-      <li>plushie_clause->its surface is [plush_texture] and [plush_markings]</li>
-      <li>plushie_clause->its seams are [seam_quality], holding together [stuffing_quality]</li>
-      <li>plushie_clause->the fabric feels [fabric_quality], giving it [visual_tone]</li>
+      <li>plushie_clause->the surface of the toy is [plush_texture] and [plush_markings]</li>
+      <li>plushie_clause->the seams of this toy are [seam_quality], holding together [stuffing_quality]</li>
+      <li>plushie_clause->the fabric of this toy feels [fabric_quality], giving it [visual_tone]</li>
       <li>plushie_clause->small [imperfections] add to its [emotive_descriptor]</li>
-      <li>plushie_clause->it’s weighted just enough to feel [balance_descriptor]</li>
+      <li>plushie_clause->this toy’s weighted just enough to feel [balance_descriptor]</li>
       <li>plushie_clause->faint [scent_descriptor] lingers, enhancing its charm</li>
-      <li>plushie_clause->the design is both [design_quality] and [emotional_tone]</li>
+      <li>plushie_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
       <li>plushie_extra_clause->subtle [use_quality] marks its fabric</li>
@@ -544,7 +544,7 @@
       <li>imperfections->tiny loose threads</li>
       <li>imperfections->faded patches</li>
       <li>imperfections->minor mismatched seams</li>
-      <li>imperfections->a slightly uneven shape</li>
+      <li>imperfections->slightly uneven shape</li>
       <li>emotive_descriptor->adorable</li>
       <li>emotive_descriptor->huggable</li>
       <li>emotive_descriptor->playful</li>
@@ -553,7 +553,7 @@
       <li>imperfections->slightly flattened sections from frequent use</li>
       <li>imperfections->tiny worn patches revealing the stuffing</li>
       <li>imperfections->mismatched stitching that adds personality</li>
-      <li>imperfections->a crooked seam that gives it character</li>
+      <li>imperfections->crooked seam that gives it character</li>
       <li>emotive_descriptor->heartwarming</li>
       <li>emotive_descriptor->endearing</li>
       <li>emotive_descriptor->snuggly</li>
@@ -561,18 +561,18 @@
       <li>emotive_descriptor->delightful</li>
 
       <!-- Scent and Balance -->
-      <li>scent_descriptor->a faint lavender fragrance</li>
-      <li>scent_descriptor->a subtle cottony smell</li>
-      <li>scent_descriptor->a whiff of fabric softener</li>
-      <li>scent_descriptor->a gentle, sweet aroma</li>
+      <li>scent_descriptor->lavender fragrance</li>
+      <li>scent_descriptor->cottony smell</li>
+      <li>scent_descriptor->whiff of fabric softener</li>
+      <li>scent_descriptor->gentle, sweet aroma</li>
       <li>balance_descriptor->perfectly comforting</li>
       <li>balance_descriptor->softly weighted</li>
       <li>balance_descriptor->light yet steady</li>
       <li>balance_descriptor->delicately balanced</li>
-      <li>scent_descriptor->a faint whiff of chamomile</li>
-      <li>scent_descriptor->a delicate trace of baby powder</li>
-      <li>scent_descriptor->a hint of freshly cleaned linen</li>
-      <li>scent_descriptor->a subtle, warm vanilla aroma</li>
+      <li>scent_descriptor->whiff of chamomile</li>
+      <li>scent_descriptor->trace of baby powder</li>
+      <li>scent_descriptor->of freshly cleaned linen</li>
+      <li>scent_descriptor->warm vanilla aroma</li>
       <li>balance_descriptor->light enough to carry everywhere</li>
       <li>balance_descriptor->weighted slightly in the center</li>
       <li>balance_descriptor->perfectly balanced for cuddling</li>
