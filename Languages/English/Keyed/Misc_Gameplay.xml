@@ -19,4 +19,5 @@
 	<VCE_QuestPartRaidsDelay>Raids arriving in {0}</VCE_QuestPartRaidsDelay>
 	<VCE_QuestPartRaidsDelayDesc>Raids will start arriving in {0}.\n\nThe raiders will target the aerodrone and attempt to destroy it.</VCE_QuestPartRaidsDelayDesc>
 	<VCE_SnowSpreadRadius>Snow spread radius: {0}</VCE_SnowSpreadRadius>
+	<VCE_DonatedToys>Since you’ve donated {0} toys to {1}, you have received {2} festive favor!</VCE_DonatedToys>
 </LanguageData>

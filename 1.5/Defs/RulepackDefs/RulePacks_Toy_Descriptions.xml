@@ -6,7 +6,7 @@
   <rulePack>
     <rulesStrings>
 	
-	  <li>r_toywooden_description->[toy_description_group]</li>
+	  <li>desc->[toy_description_group]</li>
 	  
       <!-- General Description -->
       <li>toy_description_group->[woodtoy_clause]. [play_description_group]</li>
@@ -260,7 +260,7 @@
   <rulePack>
     <rulesStrings>
 	
-	  <li>r_toymetal_description->[toy_description_group]</li>
+	  <li>dec->[toy_description_group]</li>
 	  
       <!-- General Description -->
       <li>toy_description_group->[metaltoy_clause]. [play_description_group]</li>
@@ -445,7 +445,7 @@
   <rulePack>
     <rulesStrings>
 	
-	   <li>r_toyplushie_description->[plushie_description_group]</li>
+	   <li>desc->[plushie_description_group]</li>
 
       <!-- General Description -->
       <li>plushie_description_group->[plushie_clause]. [play_description_group]</li>
@@ -468,9 +468,9 @@
       <li>plushie_clause->the surface of the toy is [plush_texture] and [plush_markings]</li>
       <li>plushie_clause->the seams of this toy are [seam_quality], holding together [stuffing_quality]</li>
       <li>plushie_clause->the fabric of this toy feels [fabric_quality], giving it [visual_tone]</li>
-      <li>plushie_clause->small [imperfections] add to its [emotive_descriptor]</li>
+      <li>plushie_clause->small [imperfections] add to its [emotive_descriptor] character</li>
       <li>plushie_clause->this toy’s weighted just enough to feel [balance_descriptor]</li>
-      <li>plushie_clause->faint [scent_descriptor] lingers, enhancing its charm</li>
+      <li>plushie_clause->[scent_descriptor] lingers, enhancing its charm</li>
       <li>plushie_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
@@ -596,17 +596,17 @@
       <li>use_quality->faintly worn from countless playful squeezes</li>
       <li>use_quality->showing signs of being a constant companion</li>
 
-      <!-- Time, Color, and Concept -->
+     <!-- Time, Color, and Concept -->
       <li>time_effect->years of cherished play</li>
       <li>time_effect->generations of love</li>
       <li>time_effect->countless quiet moments</li>
       <li>vague_inspiration->innocent dreams</li>
       <li>vague_inspiration->playful imagination</li>
       <li>vague_inspiration->comfort in the small things</li>
-      <li>color_descriptor->rosy pink</li>
-      <li>color_descriptor->soft cream</li>
-      <li>color_descriptor->light pastel blue</li>
-      <li>color_descriptor->gentle lavender</li>
+      <li>color_descriptor->a rosy pink colour</li>
+      <li>color_descriptor->a soft cream colour</li>
+      <li>color_descriptor->a light pastel blue colour</li>
+      <li>color_descriptor->a gentle lavender colour</li>
       <li>abstract_concept->comfort</li>
       <li>abstract_concept->security</li>
       <li>abstract_concept->playfulness</li>

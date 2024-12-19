@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace VanillaChristmasExpanded
 {
-    internal class ThoughtWorker_FestiveJukebox : ThoughtWorker
+    public class ThoughtWorker_FestiveJukebox : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
