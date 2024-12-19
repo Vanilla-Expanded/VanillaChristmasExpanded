@@ -32,7 +32,7 @@
       <li>woodtoy_clause->the grain of the wood runs [grain_quality], giving this toy [visual_tone]</li>
       <li>woodtoy_clause->small [imperfections] in the wood make this toy feel [emotive_descriptor]</li>
       <li>woodtoy_clause->the toy's balance feels [balance_descriptor], inviting [action_descriptor]</li>
-      <li>woodtoy_clause->faint [smell_descriptor] lingers on the wood, adding to its charm</li>
+      <li>woodtoy_clause->[smell_descriptor] lingers on the wood, adding to its charm</li>
       <li>woodtoy_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
@@ -90,9 +90,9 @@
       <li>action_descriptor->careful handling</li>
 
       <!-- Smell and Design -->
-      <li>smell_descriptor->woody</li>
-      <li>smell_descriptor->earthy</li>
-      <li>smell_descriptor->slightly sweet</li>
+      <li>smell_descriptor->a woody scent</li>
+      <li>smell_descriptor->an earthy scent</li>
+      <li>smell_descriptor->a slightly sweet smell</li>
       <li>design_quality->minimalist</li>
       <li>design_quality->intuitive</li>
       <li>design_quality->balanced</li>
@@ -281,11 +281,11 @@
 
       <!-- Metal Toy Clauses -->
       <li>metaltoy_clause->the surface of this toy is [metal_texture] and [metal_markings]</li>
-      <li>metaltoy_clause->its edges of the toy are [edge_quality], blending into [form_quality]</li>
+      <li>metaltoy_clause->its edges are [edge_quality], blending into [form_quality]</li>
       <li>metaltoy_clause->the metal finish on this toy is [finish_quality], giving it [visual_tone]</li>
       <li>metaltoy_clause->tiny [imperfections] in the metal make this toy feel [emotive_descriptor]</li>
       <li>metaltoy_clause->the toy's balance feels [balance_descriptor], encouraging [action_descriptor]</li>
-      <li>metaltoy_clause->faint [sound_effect] echoes when this toy moves, adding to its charm</li>
+      <li>metaltoy_clause->[sound_effect] echoes when this toy moves, adding to its charm</li>
       <li>metaltoy_clause->the design of this toy is both [design_quality] and [emotional_tone]</li>
 
       <!-- Extra Clauses -->
@@ -426,7 +426,7 @@
       <li>metaltoy_play_clause->the moving parts click together with [sound_effect]</li>
       <li>metaltoy_play_clause->it invites [action_type], encouraging [play_style]</li>
       <li>metaltoy_play_clause->its compact design is ideal for [imaginative_theme]</li>
-      <li>metaltoy_play_clause->it makes a [sound_effect] when turned, adding [play_quality]</li>
+      <li>metaltoy_play_clause->it makes [sound_effect] when turned, adding [play_quality]</li>
 
       <!-- Extra Clauses -->
       <li>metaltoy_play_extra_clause->its durability allows for [unexpected_use]</li>
