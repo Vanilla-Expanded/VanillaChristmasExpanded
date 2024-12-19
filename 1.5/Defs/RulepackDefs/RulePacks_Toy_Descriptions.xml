@@ -28,7 +28,7 @@
 
       <!-- Wood Toy Clauses -->
       <li>woodtoy_clause->the surface of this toy is [surface_texture] and [surface_markings]</li>
-      <li>woodtoy_clause->its edges of this toy are [edge_quality], blending into [form_quality]</li>
+      <li>woodtoy_clause->its edges are [edge_quality], blending into [form_quality]</li>
       <li>woodtoy_clause->the grain of the wood runs [grain_quality], giving this toy [visual_tone]</li>
       <li>woodtoy_clause->small [imperfections] in the wood make this toy feel [emotive_descriptor]</li>
       <li>woodtoy_clause->the toy's balance feels [balance_descriptor], inviting [action_descriptor]</li>
@@ -74,8 +74,8 @@
 
       <!-- Imperfections and Feel -->
       <li>imperfections->knots</li>
-      <li>imperfections->small cracks</li>
-      <li>imperfections->tiny dents</li>
+      <li>imperfections->cracks</li>
+      <li>imperfections->dents</li>
       <li>emotive_descriptor->charming</li>
       <li>emotive_descriptor->humble</li>
       <li>emotive_descriptor->lived-in</li>
@@ -260,7 +260,7 @@
   <rulePack>
     <rulesStrings>
 	
-	  <li>dec->[toy_description_group]</li>
+	  <li>desc->[toy_description_group]</li>
 	  
       <!-- General Description -->
       <li>toy_description_group->[metaltoy_clause]. [play_description_group]</li>
