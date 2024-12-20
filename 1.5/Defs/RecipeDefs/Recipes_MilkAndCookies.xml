@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecipeDef>
+		<defName>VCE_MakeMilkAndCookies</defName>
+		<label>make milk and cookies</label>
+		<description>Make a sweet and tasty dessert bound to make anyone happy.</description>
+		<jobString>Making milk and cookies.</jobString>
+		<workAmount>800</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Gingerbread</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>Milk</li>
+				<li>VCE_Gingerbread</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<VCE_MilkAndCookies>1</VCE_MilkAndCookies>
+		</products>
+	</RecipeDef>
+</Defs>

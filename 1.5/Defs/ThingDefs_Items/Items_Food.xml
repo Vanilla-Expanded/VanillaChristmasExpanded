@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MealLavishBase">
+		<defName>VCE_MilkAndCookies</defName>
+		<label>milk and cookies</label>
+		<description>Sweet and tasty and bound to make anyone happy, this dessert has a tendency to disappear on the morning of December 10th. Fear not, however, as when it disappears, it increases festive favor greatly.</description>
+		<tickerType>Normal</tickerType>
+		<thingClass>VanillaChristmasExpanded.MilkAndCookies</thingClass>
+		<graphicData>
+			<texPath>Things/Item/MilkAndCookies</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Ingredients">
+				<splitTransferableFoodKind>true</splitTransferableFoodKind>
+			</li>
+		</comps>
+		<ingestible>
+			<specialThoughtDirect>VCE_ConsumedMilkAndCookies</specialThoughtDirect>
+		</ingestible>
+	</ThingDef>
+</Defs>

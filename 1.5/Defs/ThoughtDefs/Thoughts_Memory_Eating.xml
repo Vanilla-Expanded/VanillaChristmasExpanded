@@ -23,4 +23,16 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	<ThoughtDef>
+		<defName>VCE_ConsumedMilkAndCookies</defName>
+		<stackLimit>1</stackLimit>
+		<durationDays>0.125</durationDays>
+		<stages>
+			<li>
+				<label>milk and cookies!</label>
+				<description>These cookies and milk are divine!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 </Defs>
