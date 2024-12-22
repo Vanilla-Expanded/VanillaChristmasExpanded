@@ -90,6 +90,7 @@
 		<costList>
 			<Steel>90</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
+			<VCE_Snow>80</VCE_Snow>
 		</costList>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Security</designationCategory>
@@ -197,6 +198,7 @@
 		<costList>
 			<Steel>300</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
+			<VCE_Snow>120</VCE_Snow>
 		</costList>
 		<hasTooltip>true</hasTooltip>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
