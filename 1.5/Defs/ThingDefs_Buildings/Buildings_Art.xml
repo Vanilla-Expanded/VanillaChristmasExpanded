@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="VCE_NativityArtBuildingBase" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Mass>3</Mass>
+			<Beauty>50</Beauty>
+			<WorkToMake>18000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<building>
+			<paintable>true</paintable>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li>
+								<!-- awful -->
+								<li>(1,0.16)</li>
+								<!-- poor -->
+								<li>(2,0.20)</li>
+								<!-- normal -->
+								<li>(3,0.22)</li>
+								<!-- good -->
+								<li>(4,0.24)</li>
+								<!-- excellent -->
+								<li>(5,0.26)</li>
+								<!-- masterwork -->
+								<li>(6,0.28)</li>
+								<!-- legendary -->
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+						<defs>
+							<li>SculptureSmall</li>
+							<li>SculptureLarge</li>
+							<li>SculptureGrand</li>
+						</defs>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<focusPerQuality>
+							<points>
+								<li>(0,0.0)</li>
+								<!-- awful -->
+								<li>(1,0.0)</li>
+								<!-- poor -->
+								<li>(2,0.01)</li>
+								<!-- normal -->
+								<li>(3,0.01)</li>
+								<!-- good -->
+								<li>(4,0.01)</li>
+								<!-- excellent -->
+								<li>(5,0.02)</li>
+								<!-- masterwork -->
+								<li>(6,0.02)</li>
+								<!-- legendary -->
+							</points>
+						</focusPerQuality>
+						<explanationKey>MeditationFocusPerSculpture</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<ritualFocus>
+			<spectateDistance>2</spectateDistance>
+			<allowedSpectateSides>Down</allowedSpectateSides>
+		</ritualFocus>
+		<placeWorkers>
+			<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityBaby</defName>
+		<label>festivity baby</label>
+		<description>A torso-sized piece of material sculpted into an artistic form, depicting a festive baby in a crib. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Baby</texPath>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityFather</defName>
+		<label>festivity father</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive father keeping a watchful eye. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Father</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityMother</defName>
+		<label>festivity mother</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive mother kneeling on the floor with a loving expression. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Mother</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityDonkey</defName>
+		<label>festivity donkey</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive donkey kneeling with reverence. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Donkey</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityOx</defName>
+		<label>festivity ox</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive ox kneeling with reverence. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Ox</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivitySheep</defName>
+		<label>festivity sheep</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive sheep kneeling with reverence. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Sheep</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityShepherd</defName>
+		<label>festivity shepherd</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive shepherd giving away his animals as a gift. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Shepherd</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityHunter</defName>
+		<label>festivity hunter</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive hunter submitting his hard work as tithe. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_Hunter</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityShepherd</li>
+					<li>VCE_FestivityKing</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VCE_NativityArtBuildingBase">
+		<defName>VCE_FestivityKing</defName>
+		<label>festivity king</label>
+		<description>A person-sized piece of material sculpted into an artistic form, depicting a festive king bending his knee. Placing all pieces of the festivity scene next to each other is bound to greatly increase their beauty.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Festivity/Festivity_King</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Beauty>25</Beauty>
+				</statOffsets>
+				<maxDistance>7</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VCE_FestivityBaby</li>
+					<li>VCE_FestivityFather</li>
+					<li>VCE_FestivityMother</li>
+					<li>VCE_FestivityDonkey</li>
+					<li>VCE_FestivityOx</li>
+					<li>VCE_FestivitySheep</li>
+					<li>VCE_FestivityHunter</li>
+					<li>VCE_FestivityShepherd</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
