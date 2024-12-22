@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="IdeoBuildingConsumableBase">
+		<defName>VCE_FestiveFeastTable</defName>
+		<label>festive feast table</label>
+		<description>A wooden table covered with delicious, lavish meals that will suit anyone. Ready for festive feast.</description>
+		<ideoBuildingNamerBase>VCE_FestiveFeastNamer</ideoBuildingNamerBase>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>Things/Building/FestiveFeast/FestiveFeast</texPath>
+			<drawSize>(4,6)</drawSize>
+		</graphicData>
+		<size>(2,4)</size>
+		<stuffCategories>
+			<li>VCE_LavishMeals</li>
+		</stuffCategories>
+		<costStuffCount>12</costStuffCount>
+		<costList>
+			<WoodLog>80</WoodLog>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<ritualFocus>
+			<spectateDistance>1~2</spectateDistance>
+		</ritualFocus>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<MarketValue>360</MarketValue>
+			<Flammability>1</Flammability>
+			<Mass>50</Mass>
+			<Beauty>50</Beauty>
+		</statBases>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Ideology</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<placeWorkers Inherit="False"/>
+		<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+	</ThingDef>
+</Defs>
