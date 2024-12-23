@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <DutyDef>
+    <defName>VCE_EatAtFestiveFeast</defName>
+    <hook>HighPriority</hook>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="VanillaChristmasExpanded.JobGiver_EatAtFestiveFeast" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+ 
+  
+</Defs>

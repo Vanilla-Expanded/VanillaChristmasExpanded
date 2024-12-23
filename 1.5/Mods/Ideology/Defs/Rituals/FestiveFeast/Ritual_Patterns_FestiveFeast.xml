@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RitualPatternDef>
+		<defName>VCE_FestiveFeastPattern</defName>
+		<shortDescOverride>festive feast</shortDescOverride>
+		<descOverride>A ritualistic festive meal. Participants gather around a table full of delicious food and feast on it.</descOverride>
+		<iconPathOverride>UI/Ideology/Ritual_FestiveFeast</iconPathOverride>
+		<ritualObligationTargetFilter>VCE_FestiveFeastTarget</ritualObligationTargetFilter>
+		<ritualBehavior>VCE_FestiveFeastBehaviour</ritualBehavior>
+		<ritualOutcomeEffect>VCE_FestiveFeastOutcome</ritualOutcomeEffect>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualOnlyForIdeoMembers>true</ritualOnlyForIdeoMembers>
+	
+	</RitualPatternDef>
+</Defs>

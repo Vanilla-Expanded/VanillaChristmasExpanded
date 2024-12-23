@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+ 
+ <RitualOutcomeEffectDef>
+    <defName>VCE_FestiveFeastOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days. If the festive feast is fun or unforgettable, varying festive favor amounts will be given for each participant.</description>
+    <workerClass>VanillaChristmasExpanded.RitualOutcomeEffectWorker_FestiveFeast</workerClass>
+    
+    <comps>
+      
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>leader</roleId>
+        <label>leader present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(12,  0.25)</li>
+          
+          </points>
+        </curve>
+      </li>
+	
+	  <li Class="VanillaChristmasExpanded.RitualOutcomeComp_Decembruary">
+        <qualityOffset>0.5</qualityOffset>
+		<label>during Decembary</label>
+		<labelNotMet>not during Decembary</labelNotMet>
+      </li>
+      
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>VCE_TerribleFeast</memory>
+        <description>The {0} was terrible. The food was disgusting and we just quarreled and bickered through all of it.</description>
+		
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Boring</label>
+        <chance>0.15</chance>
+        <memory>VCE_BoringFeast</memory>
+        <description>The {0} was boring. We just went throught he motions, without putting much heart into it. The food was a bit bland.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Fun</label>
+        <chance>0.6</chance>
+        <memory>VCE_FunFeast</memory>
+        <description>The {0} was super fun. Gathering together to share a festive feast really enhances the spirit of the season.</description>
+      
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>VCE_UnforgettableFeast</memory>
+        <description>The {0} was unforgettable! We truly felt like a big family and the food was just simply amazing!</description>
+        
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+ 
+  
+  
+</Defs>

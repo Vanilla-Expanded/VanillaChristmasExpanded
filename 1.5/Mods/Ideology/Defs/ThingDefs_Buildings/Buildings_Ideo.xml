@@ -3,6 +3,7 @@
 	<ThingDef ParentName="IdeoBuildingConsumableBase">
 		<defName>VCE_FestiveFeastTable</defName>
 		<label>festive feast table</label>
+		<thingClass>VanillaChristmasExpanded.FestiveFeastTable</thingClass>
 		<description>A wooden table covered with delicious, lavish meals that will suit anyone. Ready for festive feast.</description>
 		<ideoBuildingNamerBase>VCE_FestiveFeastNamer</ideoBuildingNamerBase>
 		<graphicData>
