@@ -25,9 +25,9 @@ namespace VanillaChristmasExpanded
                     if (inventory[i] is Toy toy)
                     {
                         flag = true;
-                        if(toy.cachedQuality.Quality > higherQuality)
+                        if(toy.cachedQuality > higherQuality)
                         {
-                            higherQuality=toy.cachedQuality.Quality;
+                            higherQuality=toy.cachedQuality;
                         }
                     }
                 
@@ -69,9 +69,9 @@ namespace VanillaChristmasExpanded
                     if (inventory[i] is Toy toy)
                     {
                         flag = true;
-                        if (toy.cachedQuality.Quality > higherQuality)
+                        if (toy.cachedQuality > higherQuality)
                         {
-                            higherQuality = toy.cachedQuality.Quality;
+                            higherQuality = toy.cachedQuality;
                         }
                     }
 

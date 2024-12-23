@@ -17,7 +17,7 @@ namespace VanillaChristmasExpanded
     public class Toy : ThingWithComps
     {
 
-        public CompQuality cachedQuality;
+        public QualityCategory cachedQuality;
 
         public string description ="";
 
@@ -25,12 +25,14 @@ namespace VanillaChristmasExpanded
         {
             base.ExposeData();
             Scribe_Values.Look(ref this.description, "description", "", false);
+            Scribe_Values.Look(ref this.cachedQuality, "cachedQuality", QualityCategory.Normal, false);
+
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            cachedQuality = this.TryGetComp<CompQuality>();
+            cachedQuality = this.TryGetComp<CompQuality>().Quality;
         }
 
         public override string DescriptionFlavor => DescriptionDetailed;

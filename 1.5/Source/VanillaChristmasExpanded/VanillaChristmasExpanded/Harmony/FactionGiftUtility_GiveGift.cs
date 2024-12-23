@@ -49,7 +49,7 @@ namespace VanillaChristmasExpanded
                     if(thingTraded is Toy toy)
                     {
                         totalGifts++;
-                        int favor = FestiveFavorByQuality(toy.cachedQuality.Quality);
+                        int favor = FestiveFavorByQuality(toy.cachedQuality);
                         totalFestive += favor;
                         FestiveFavorManager.Instance.AddFestiveFavor(favor);
 
@@ -90,7 +90,7 @@ namespace VanillaChristmasExpanded
                     if (thingTraded is Toy toy)
                     {
                         totalGifts++;
-                        int favor = VanillaChristmasExpanded_FactionGiftUtility_GiveGift_Patch.FestiveFavorByQuality(toy.cachedQuality.Quality);
+                        int favor = VanillaChristmasExpanded_FactionGiftUtility_GiveGift_Patch.FestiveFavorByQuality(toy.cachedQuality);
                         totalFestive += favor;
                         FestiveFavorManager.Instance.AddFestiveFavor(favor);
 
