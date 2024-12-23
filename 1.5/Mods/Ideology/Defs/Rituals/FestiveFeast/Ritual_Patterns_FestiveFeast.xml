@@ -10,6 +10,6 @@
 		<ritualOutcomeEffect>VCE_FestiveFeastOutcome</ritualOutcomeEffect>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualOnlyForIdeoMembers>true</ritualOnlyForIdeoMembers>
-	
+		<ignoreConsumableBuildingRequirement>true</ignoreConsumableBuildingRequirement>
 	</RitualPatternDef>
 </Defs>
