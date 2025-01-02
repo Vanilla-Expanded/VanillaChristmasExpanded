@@ -26,6 +26,7 @@ namespace VanillaChristmasExpanded
         [MayRequireIdeology]
         public static HistoryEventDef CharityFulfilled_HospitalityRefugees;
 
+        [MayRequireIdeology]
         public static JobDef VCE_EatAtFestiveFeast;
 
         public static ThoughtDef AteLavishMeal;

@@ -33,8 +33,7 @@
 			<baseHungerRate>1.1</baseHungerRate>
 			<foodType>VegetarianRoughAnimal</foodType>
 			<leatherDef>Leather_Plain</leatherDef>
-			<wildness>0.75</wildness>
-			<roamMtbDays>2</roamMtbDays>
+			<wildness>0.75</wildness>			
 			<mateMtbHours>12</mateMtbHours>
 			<trainability>Advanced</trainability>
 			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
