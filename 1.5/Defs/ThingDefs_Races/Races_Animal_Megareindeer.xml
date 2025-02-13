@@ -188,7 +188,7 @@
 					<drawSize>2.6</drawSize>
 				</dessicatedBodyGraphicData>
 				<femaleDessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Elk/MegareindeerFemale_Dessicated</texPath>
+					<texPath>Things/Pawn/Animal/Megareindeer/MegareindeerFemale_Dessicated</texPath>
 					<drawSize>2.4</drawSize>
 				</femaleDessicatedBodyGraphicData>
 			</li>
