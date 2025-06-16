@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>VCE_Thought_Toy_Children</defName>
+		<workerClass>VanillaChristmasExpanded.ThoughtWorker_Toys_Children</workerClass>
+		
+		<stages>
+			<li>
+				<label>awful toy</label>
+				<description>It’s kinda busted, but I can still play with it!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>poor toy</label>
+				<description>It’s not the best, but I can still make up fun stuff with it!</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>normal toy</label>
+				<description>This toy is pretty cool! I like playing with it a lot!</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+			<li>
+				<label>good toy</label>
+				<description>This toy is awesome! It’s really fun to play with!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+			<li>
+				<label>excellent toy</label>
+				<description>This is the coolest toy ever! I love it so much!</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+			<li>
+				<label>masterwork toy</label>
+				<description>This toy is the best in the whole world! I never want to stop playing with it!</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+			<li>
+				<label>legendary toy</label>
+				<description>Whoa! This toy is like magic—it’s so amazing!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>VCE_Thought_Toy_Teenager</defName>
+		<workerClass>VanillaChristmasExpanded.ThoughtWorker_Toys_Teenager</workerClass>
+		
+		<stages>
+			<li>
+				<label>awful toy</label>
+				<description>Ugh, this thing is trash. Why even bother?</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>poor toy</label>
+				<description>Yeah, okay, this toy kinda sucks, but whatever.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+			<li>
+				<label>normal toy</label>
+				<description>It’s… fine, I guess. Not terrible, not great.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+			<li>
+				<label>good toy</label>
+				<description>Huh, this is actually kinda nice. Better than I expected.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>excellent toy</label>
+				<description>Hey, this is a pretty cool toy. I actually like it.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+			<li>
+				<label>masterwork toy</label>
+				<description>Wow, this toy’s legit amazing. Makes me feel like a kid again.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>legendary toy</label>
+				<description>Okay, this is next level. Like, it’s so good I can’t even pretend not to love it.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

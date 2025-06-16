@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecipeDef>
+		<defName>VCE_MakeEggnog</defName>
+		<label>make eggnog</label>
+		<description>Make a rich and creamy beverage crafted from eggs, perfect for festive occasions or a sweet treat.</description>
+		<jobString>Making eggnog.</jobString>
+		<workAmount>90</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>eggs</customSummary>
+					<categories>
+						<li>EggsUnfertilized</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>EggsUnfertilized</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<VCE_Eggnog>1</VCE_Eggnog>
+		</products>
+	</RecipeDef>
+</Defs>

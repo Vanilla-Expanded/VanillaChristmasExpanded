@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>VCE_Thought_FestiveJukebox</defName>
+		<workerClass>VanillaChristmasExpanded.ThoughtWorker_FestiveJukebox</workerClass>
+		
+		<stages>
+			<li>
+				<label>jolly songs</label>
+				<description>I’m listening to some festive hits!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			
+		</stages>
+	</ThoughtDef>
+</Defs>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_FestiveCracker</defName>
+		<label>festive cracker</label>
+		<description>A small package of plastic waste and candy. When pulled apart, sprays confetti, bringing festive joy to everyone.</description>
+		<graphicData>
+			<texPath>Things/Item/FestiveCracker</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.88</drawSize>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>2</MarketValue>
+			<Mass>0.055</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>12</DeteriorationRate>
+			<Nutrition>0.04</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<foodType>Processed</foodType>
+			<joy>0.18</joy>
+			<joyKind>Gluttonous</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<specialThoughtDirect>VCE_ConsumedFestiveCracker</specialThoughtDirect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<outcomeDoers>
+				<li Class="VanillaChristmasExpanded.IngestionOutcomeDoer_Confetti">
+        
+        </li>
+			</outcomeDoers>
+		</ingestible>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>10</possessionCount>
+	</ThingDef>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_HotCocoa</defName>
+		<label>hot cocoa</label>
+		<description>A comforting and creamy beverage offering a rich chocolate flavor that warms both body and soul. Perfect for cold days or as a delightful treat, it’s a simple yet indulgent classic.</description>
+		<graphicData>
+			<texPath>Things/Item/HotCocoa</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>3</MarketValue>
+			<Mass>0.075</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>8</DeteriorationRate>
+			<Nutrition>0.1</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<foodType>Processed</foodType>
+			<joy>0.15</joy>
+			<joyKind>Gluttonous</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<outcomeDoers>
+				<li Class="VanillaChristmasExpanded.IngestionOutcomeDoer_GainFavor">
+					<amount>3</amount>
+					<needsDecembary>true</needsDecembary>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>10</possessionCount>
+	</ThingDef>
+</Defs>

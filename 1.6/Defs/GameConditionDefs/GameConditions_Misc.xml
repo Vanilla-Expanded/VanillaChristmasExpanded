@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+
+  <GameConditionDef>
+    <defName>VCE_ColdSnap</defName>
+    <conditionClass>VanillaChristmasExpanded.GameCondition_FestiveCold</conditionClass>
+    <label>festive cold</label>
+    <description>A festive cold snap is freezing the region.</description>
+    <descriptionFuture>a front of cold air will cool the area around [map_definite] for [gameConditionDuration_duration], harming crops and any person or animal without adequate protection</descriptionFuture>
+    <endMessage>The festive cold is over.</endMessage>
+    <letterText>An unusual cold snap has set in.\n\nCold snaps can quickly kill by hypothermia. Be sure to build a heated space to survive, wear appropriate apparel, and try to harvest crops before they freeze and die.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+	<canBePermanent>true</canBePermanent>
+    
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+
+
+</Defs>

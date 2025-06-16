@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RulePackDef>
+		<defName>VCE_FestiveFeastNamer</defName>
+		<rulePack>
+			<rulesStrings>
+			
+				<li>buildingName->[category] of [specialDetail]</li>
+				<li>buildingName->[descriptor] [category]</li>
+				<li>descriptor->Grand</li>
+				<li>descriptor->Celebratory</li>
+				<li>descriptor->Festive</li>
+				<li>descriptor->Winter</li>
+				<li>category->Feast Hall</li>
+				<li>category->Banquet Table</li>
+				<li>category->Celebration Center</li>
+				<li>category->Christmas Shrine</li>
+				<li>category->Communal Table</li>
+				<li>specialDetail->Winter Merriment</li>
+				<li>specialDetail->Festive Delights</li>
+				<li>specialDetail->the Eternal Feast</li>
+				<li>specialDetail->Seasonal Joy</li>
+				<li>specialDetail->Gathering Bliss</li>
+				<li>specialDetail->Festive Spirits</li>
+				<li>specialDetail->the Rim’s Revelry</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>

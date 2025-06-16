@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="TreeBase">
+		<defName>VCE_Plant_TreeSpruce</defName>
+		<label>spruce tree</label>
+		<description>A tall conifer with dark green needles and densely packed branches. Its slender, conical shape is ideal for cold, snowy climates.</description>
+		<graphicData>
+			<texPath>Things/Plant/TreeFir</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.15, 0.3, 0.15)</volume>
+				<offset>(0,0,-0.38)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<BeautyOutdoors>2</BeautyOutdoors>
+		</statBases>
+		<ingestible/>
+		<plant>
+			<growDays>20</growDays>
+			<visualSizeRange>1.5~3.0</visualSizeRange>
+			<harvestWork>800</harvestWork>
+			<harvestYield>27</harvestYield>
+			
+			<immatureGraphicPath>Things/Plant/TreeFirImmature</immatureGraphicPath>
+		</plant>
+	</ThingDef>
+	<ThingDef ParentName="TreeBase">
+		<defName>VCE_Plant_TreeFir</defName>
+		<label>fir tree</label>
+		<description>A majestic evergreen with soft, flat needles and smooth bark. Its symmetrical silhouette is often admired in alpine forests.</description>
+		<graphicData>
+			<texPath>Things/Plant/TreeSpruce</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.15, 0.3, 0.15)</volume>
+				<offset>(0,0,-0.38)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<BeautyOutdoors>2</BeautyOutdoors>
+		</statBases>
+		<ingestible/>
+		<plant>
+			<growDays>20</growDays>
+			<visualSizeRange>1.5~3.0</visualSizeRange>
+			<harvestWork>800</harvestWork>
+			<harvestYield>27</harvestYield>
+		
+			<immatureGraphicPath>Things/Plant/TreeSpruceImmature</immatureGraphicPath>
+		</plant>
+	</ThingDef>
+	<ThingDef ParentName="TreeBase">
+		<defName>VCE_Plant_TreeJuniper</defName>
+		<label>juniper tree</label>
+		<description>A hardy evergreen shrub or small tree with spiky needles and aromatic berries. It thrives in rocky, arid landscapes.</description>
+		<graphicData>
+			<texPath>Things/Plant/TreeJuniper</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+				<volume>(0.15, 0.3, 0.15)</volume>
+				<offset>(0,0,-0.38)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<BeautyOutdoors>2</BeautyOutdoors>
+		</statBases>
+		<ingestible/>
+		<plant>
+			<growDays>20</growDays>
+			<visualSizeRange>1.5~3.0</visualSizeRange>
+			<harvestWork>800</harvestWork>
+			<harvestYield>27</harvestYield>
+		
+			<immatureGraphicPath>Things/Plant/TreeJuniperImmature</immatureGraphicPath>
+		</plant>
+	</ThingDef>
+</Defs>

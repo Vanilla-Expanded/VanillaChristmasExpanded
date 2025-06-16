@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VCE_FestiveJukebox</defName>
+		<label>festive jukebox</label>
+		<description>A classic music-playing device equipped with colorful lights and a selection of timeless festive tracks. Even on the rimworlds, a jukebox can fill the room with lively tunes or jolly melodies to lift the spirits.</description>
+		<graphicData>
+			<texPath>Things/Building/FestiveJukebox/FestiveJukebox</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>10000</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Beauty>3</Beauty>
+			<Mass>14</Mass>
+			<MarketValue>310</MarketValue>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>BuildingsJoy</li>
+		</thingCategories>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="VEF.Sounds.CompProperties_AmbientSound">
+				<ambientSound>VCE_JukeboxSongs</ambientSound>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationCategory>Joy</designationCategory>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<specialDisplayRadius>9.9</specialDisplayRadius>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	
+		<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/BiomeDef[defName = "BorealForest"]/wildPlants</xpath>
+		<value>
+			<VCE_Plant_TreeSpruce>3.0</VCE_Plant_TreeSpruce>
+			<VCE_Plant_TreeFir>3.0</VCE_Plant_TreeFir>
+			<VCE_Plant_TreeJuniper>3.0</VCE_Plant_TreeJuniper>
+		</value>
+	</Operation>
+	
+
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/BiomeDef[defName = "Tundra"]/wildPlants</xpath>
+		<value>
+			<VCE_Plant_TreeSpruce>0.06</VCE_Plant_TreeSpruce>
+			<VCE_Plant_TreeFir>0.06</VCE_Plant_TreeFir>
+			<VCE_Plant_TreeJuniper>0.06</VCE_Plant_TreeJuniper>
+		
+		</value>
+	</Operation>	
+	
+
+	
+	
+</Patch>

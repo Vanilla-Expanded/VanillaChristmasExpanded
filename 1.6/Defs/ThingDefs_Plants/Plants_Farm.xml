@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="PlantBase">
+		<defName>VCE_GingerRoot</defName>
+		<label>ginger root</label>
+		<thingClass>VanillaChristmasExpanded.Plant_Cold</thingClass>
+		<description>A spicy-sweet root with a warm, festive aroma. Ginger root thrives only in the chill of Decembrary and is the key ingredient for creating delicious gingerbread treats.</description>
+		<descriptionHyperlinks>
+			<ThingDef>VCE_Gingerbread</ThingDef>
+		</descriptionHyperlinks>
+		<selectable>true</selectable>
+		<graphicData>
+			<texPath>Things/Plant/GingerRoot</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+
+
+			<shadowData>
+				<volume>(0.55, 0.17, 0.15)</volume>
+				<offset>(0,0,-0.2)</offset>
+			</shadowData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<Nutrition>0.25</Nutrition>
+		</statBases>
+		<plant>
+		<growDays>3</growDays>			
+			<maxMeshCount>4</maxMeshCount>
+			<fertilityMin>0.7</fertilityMin>
+			<fertilitySensitivity>0.4</fertilitySensitivity>
+			<wildClusterRadius>4</wildClusterRadius>
+			
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<harvestYield>6</harvestYield>
+			<sowWork>170</sowWork>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<harvestWork>200</harvestWork>
+			<harvestTag>Standard</harvestTag>
+		
+			<harvestedThingDef>VCE_Gingerbread</harvestedThingDef>
+		</plant>
+	</ThingDef>
+</Defs>

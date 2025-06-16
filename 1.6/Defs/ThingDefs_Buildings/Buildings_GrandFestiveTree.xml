@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="LampBase">
+		<defName>VCE_GrandFestiveTree</defName>
+		<label>grand festive tree</label>
+		<description>A grand, carefully decorated tree with hundreds of ornaments, chains of lamps and tinsels. Lights up a large area. In Decembrary, grand festive trees contribute towards festive favor greatly, and depending on their quality, generate less or more festive favor every day. It takes a long time to construct a grand festive tree, but once built, decorations can be changed at will.</description>
+		<designationHotKey>Misc11</designationHotKey>
+		<uiIconPath>Things/Building/GrandFestiveTree/FestiveTree_Normal_Red</uiIconPath>
+		<thingClass>VanillaChristmasExpanded.GrandFestiveTree</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/GrandFestiveTree/FestiveTree_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<Steel>60</Steel>
+			<WoodLog>120</WoodLog>
+			<Gold>10</Gold>
+			<Silver>60</Silver>
+		</costList>
+		<statBases>
+			<Mass>20</Mass>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToMake>2600</WorkToMake>
+			<Beauty>125</Beauty>
+		</statBases>
+		<pathCost>14</pathCost>
+		<fillPercent>0.3</fillPercent>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>600</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>11.72</glowRadius>
+				<glowColor>(214,148,94,0)</glowColor>
+				<colorPickerEnabled>true</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>
+			</li>
+			<li><compClass>CompQuality</compClass></li>
+		 
+		
+		</comps>
+		<modExtensions>
+			<li Class="VanillaChristmasExpanded.GraphicsByQualityExtension">
+				<graphics>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Awful_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Awful_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Awful_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Awful_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Awful_Yellow</li>
+						</texturePaths>
+						<quality>Awful</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Poor_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Poor_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Poor_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Poor_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Poor_Yellow</li>
+						</texturePaths>
+						<quality>Poor</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Normal_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Normal_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Normal_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Normal_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Normal_Yellow</li>
+						</texturePaths>
+						<quality>Normal</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Good_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Good_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Good_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Good_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Good_Yellow</li>
+						</texturePaths>
+						<quality>Good</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Excellent_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Excellent_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Excellent_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Excellent_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Excellent_Yellow</li>
+						</texturePaths>
+						<quality>Excellent</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Masterwork_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Masterwork_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Masterwork_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Masterwork_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Masterwork_Yellow</li>
+						</texturePaths>
+						<quality>Masterwork</quality>
+					</li>
+					<li>
+						<texturePaths>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Legendary_Red</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Legendary_Blue</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Legendary_Green</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Legendary_White</li>
+							<li>Things/Building/GrandFestiveTree/FestiveTree_Legendary_Yellow</li>
+						</texturePaths>
+						<quality>Legendary</quality>
+					</li>
+				</graphics>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

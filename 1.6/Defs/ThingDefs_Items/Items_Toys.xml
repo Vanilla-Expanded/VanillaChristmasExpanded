@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_Toy_Cloth</defName>
+		<label>plushie toy</label>
+		<thingClass>VanillaChristmasExpanded.Toy</thingClass>
+		<description>A small plushie toy. When carried by children, helps them create long lasting memories. The impact that such a toy can have depends on the quality of its craftsmanship. It is also widely known that donating toys to those in need is a very festive thing to do.</description>
+		<graphicData>
+			<texPath>Things/Item/Toys/ToyCloth</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<orderedTakeGroup>VCE_Toys</orderedTakeGroup>
+		<stackLimit>1</stackLimit>
+		<tickerType>Normal</tickerType>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<MarketValue>65</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			
+		</comps>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>1</possessionCount>
+		<modExtensions>
+			<li Class="VanillaChristmasExpanded.ToyDetails">
+				<descRulePack>VCE_ToyDescriptionRoot_Plushie</descRulePack>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_Toy_Metal</defName>
+		<label>metal toy</label>
+		<thingClass>VanillaChristmasExpanded.Toy</thingClass>
+		<description>A small metal toy. When carried by children, helps them create long lasting memories. The impact that such a toy can have depends on the quality of its craftsmanship. It is also widely known that donating toys to those in need is a very festive thing to do.</description>
+		<graphicData>
+			<texPath>Things/Item/Toys/ToyMetal</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<orderedTakeGroup>VCE_Toys</orderedTakeGroup>
+		<stackLimit>1</stackLimit>
+		<tickerType>Normal</tickerType>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<MarketValue>65</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			
+		</comps>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>1</possessionCount>
+		<modExtensions>
+			<li Class="VanillaChristmasExpanded.ToyDetails">
+				<descRulePack>VCE_ToyDescriptionRoot_Metal</descRulePack>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_Toy_Wooden</defName>
+		<label>wooden toy</label>
+		<thingClass>VanillaChristmasExpanded.Toy</thingClass>
+		<description>A small wooden toy. When carried by children, helps them create long lasting memories. The impact that such a toy can have depends on the quality of its craftsmanship. It is also widely known that donating toys to those in need is a very festive thing to do.</description>
+		<graphicData>
+			<texPath>Things/Item/Toys/ToyWooden</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<orderedTakeGroup>VCE_Toys</orderedTakeGroup>
+		<stackLimit>1</stackLimit>
+		<tickerType>Normal</tickerType>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<MarketValue>65</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.6</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			
+		</comps>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>1</possessionCount>
+		<modExtensions>
+			<li Class="VanillaChristmasExpanded.ToyDetails">
+				<descRulePack>VCE_ToyDescriptionRoot_Wooden</descRulePack>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

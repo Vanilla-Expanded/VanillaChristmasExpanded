@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_Snow</defName>
+		<label>snow</label>
+		<description>Compressed frozen water crystals that can be shaped into sturdy structures that will melt and disappear in heat.</description>
+		<graphicData>
+			<texPath>Things/Item/Resources/Snow</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<soundInteract>VCE_Snow</soundInteract>
+		<soundDrop>VCE_Snow</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<statBases>
+			<MarketValue>0.05</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<Beauty>-12</Beauty>
+			<MaxHitPoints>24</MaxHitPoints>
+			<SharpDamageMultiplier>0.25</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.25</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stackLimit>150</stackLimit>
+		<smallVolume>true</smallVolume>
+		<deepCommonality>0</deepCommonality>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<possessionCount>40</possessionCount>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<appearance>Metal</appearance>
+			<color>(233,236,243)</color>
+			<commonality>0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactBullet>VCE_Snow</soundImpactBullet>
+			<soundMeleeHitSharp>VCE_Snow</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>VCE_Snow</soundMeleeHitBlunt>
+			<soundImpactMelee>VCE_Snow</soundImpactMelee>
+			<statOffsets>
+        
+			</statOffsets>
+			<statFactors>
+				<WorkToMake>0.8</WorkToMake>
+				<WorkToBuild>2</WorkToBuild>
+				<MaxHitPoints>0.25</MaxHitPoints>
+				<Flammability>0</Flammability>
+				<Beauty>0.8</Beauty>
+				<DoorOpenSpeed>0.45</DoorOpenSpeed>
+				<BedRestEffectiveness>0.45</BedRestEffectiveness>
+				<MeleeWeapon_CooldownMultiplier>1.5</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+			<allowedInStuffGeneration>false</allowedInStuffGeneration>
+		</stuffProps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		
+	</ThingDef>
+</Defs>

@@ -20,15 +20,10 @@
 	</modDependencies>
   <supportedVersions>
    
-    <li>1.5</li>
+    <li>1.5</li><li>1.6</li>
   </supportedVersions>
  <loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
-		<li>Ludeon.RimWorld.Anomaly</li>
-		<li>brrainz.harmony</li>
+		
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
   <description>Festive season is approaching us fast, and I think it’s proper that Vanilla Expanded releases a big mod to celebrate that time. It’s been a very productive year for us, and with some festive content, we get to breathe, enjoy and celebrate this beautiful time of the year.

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Precepts -->
+
+
+
+	<PreceptDef>
+		<defName>VCE_FestiveFeast</defName>
+		<label>festive feast</label>
+		<description>A ritualistic festive meal. Participants gather around a table full of delicious food and feast on it.</description>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<visible>true</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<ritualPatternBase>VCE_FestiveFeastPattern</ritualPatternBase>
+		<iconPath>UI/Ideology/Ritual_FestiveFeast</iconPath>
+		<ignoreNameUniqueness>false</ignoreNameUniqueness>
+		
+	</PreceptDef>
+
+
+
+
+
+
+</Defs>

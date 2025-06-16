@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Abstract="True" Name="VCE_BuildingFloorCoveringBase" ParentName="BuildingBase">
+		<altitudeLayer>FloorCoverings</altitudeLayer>
+		<wipesPlants>true</wipesPlants>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<designationCategory>Floors</designationCategory>
+		<selectable>true</selectable>
+		<useHitPoints>true</useHitPoints>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<blocksAltitudes>
+			<li>FloorCoverings</li>
+		</blocksAltitudes>
+		<building>
+			<isEdifice>false</isEdifice>
+			
+			<paintable>true</paintable>
+  
+		</building>
+		 <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>1</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>1</weight>
+          <only>(0.639,0.16,0.164)</only>
+        </li>
+        <li>
+          <weight>1</weight>
+          <only>(0.149,0.352,0.25)</only>
+        </li>
+      </options>
+    </colorGenerator>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="VCE_BuildingFloorCoveringMediumBase" ParentName="VCE_BuildingFloorCoveringBase">
+		<size>(3,3)</size>
+		<statBases>
+			<Beauty>15</Beauty>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>100</Mass>
+			<MarketValue>154</MarketValue>
+		</statBases>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="VCE_BuildingFloorCoveringBroadBase" ParentName="VCE_BuildingFloorCoveringBase">
+		<size>(4,4)</size>
+		<statBases>
+			<Beauty>30</Beauty>
+			<WorkToBuild>2000</WorkToBuild>
+			<Mass>150</Mass>
+			<MarketValue>230</MarketValue>
+		</statBases>
+	</ThingDef>
+	<ThingDef ParentName="VCE_BuildingFloorCoveringMediumBase">
+		<defName>VCE_FestiveRug_Medium</defName>
+		<label>festive rug (medium)</label>
+		<description>A festive rug with a wintery pattern, for decorating a floor.</description>
+		<statBases>
+			<Flammability>0.32</Flammability>
+		</statBases>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Floor/FestiveRugMedium</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<comps>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+		<costList>
+			<Cloth>100</Cloth>
+		</costList>
+	</ThingDef>
+	<ThingDef ParentName="VCE_BuildingFloorCoveringBroadBase">
+		<defName>VCE_FestiveRug_Broad</defName>
+		<label>festive rug (broad)</label>
+		<description>A festive rug with a wintery pattern, for decorating a floor.</description>
+		<statBases>
+			<Flammability>0.32</Flammability>
+		</statBases>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Floor/FestiveRugBroad</texPath>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<comps>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+		<costList>
+			<Cloth>150</Cloth>
+		</costList>
+	</ThingDef>
+</Defs>

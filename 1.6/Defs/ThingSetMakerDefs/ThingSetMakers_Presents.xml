@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingSetMakerDef>
+		<defName>VCE_Reward_Resources</defName>
+		<root Class="ThingSetMaker_Sum">
+			<resolveInOrder>true</resolveInOrder>
+			<options>
+				<li>
+					<maxMarketValue>5500</maxMarketValue>
+					<thingSetMaker Class="ThingSetMaker_RandomOption">
+						<fixedParams>
+							<minSingleItemMarketValuePct>0.01</minSingleItemMarketValuePct>
+						</fixedParams>
+						<options>
+							
+							<li>
+								<weight>1</weight>
+								<thingSetMaker Class="ThingSetMaker_MarketValue">
+									<fixedParams>
+										<filter>
+											<categories>
+												<li>ResourcesRaw</li>
+											</categories>
+										</filter>
+									</fixedParams>
+								</thingSetMaker>
+							</li>
+						</options>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	
+	<ThingSetMakerDef>
+		<defName>VCE_Reward_Anything</defName>
+		<root Class="ThingSetMaker_Sum">
+			<resolveInOrder>true</resolveInOrder>
+			<options>
+				<li>
+					<maxMarketValue>5500</maxMarketValue>
+					<thingSetMaker Class="ThingSetMaker_RandomOption">
+						<fixedParams>
+							<minSingleItemMarketValuePct>0.01</minSingleItemMarketValuePct>
+						</fixedParams>
+						<options>
+							
+							<li>
+								<weight>1</weight>
+								<thingSetMaker Class="ThingSetMaker_MarketValue">
+									<fixedParams>
+										<filter>
+											<categories>
+												<li>Root</li>
+											</categories>
+										</filter>
+									</fixedParams>
+								</thingSetMaker>
+							</li>
+						</options>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+</Defs>
+

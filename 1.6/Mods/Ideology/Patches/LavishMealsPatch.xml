@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="MealLavishBase"]</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>VCE_LavishMeals</li>
+				</categories>
+			</stuffProps>
+		</value>
+	</Operation>
+</Patch>

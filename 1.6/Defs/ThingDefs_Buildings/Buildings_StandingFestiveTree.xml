@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="LampBase">
+		<defName>VCE_StandingFestiveTree</defName>
+		<label>standing festive tree</label>
+		<description>A small, decorative tree with a number of festive lights that light up an area. People need light to move and work at full speed.</description>
+		<designationHotKey>Misc11</designationHotKey>
+		<graphicData>
+			<texPath>Things/Building/StandingFestiveTree/StandingFestiveTree</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<uiIconScale>0.6</uiIconScale>
+		<costList>
+			<Steel>20</Steel>
+			<WoodLog>3</WoodLog>
+		</costList>
+		<statBases>
+			<Mass>3</Mass>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+			<MarketValue>39</MarketValue>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToMake>300</WorkToMake>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>10</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4.09</glowRadius>
+				<glowColor>(214,148,94,0)</glowColor>
+				<colorPickerEnabled>true</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
