@@ -97,28 +97,42 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ItemProcessor.ItemAcceptedDef[defName= "IP_ElectricPotFirstItem"]/items</xpath>
+					<xpath>Defs/ThingDef[defName= "VCE_ElectricPot"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
 					<value>
-						<li>VCE_UncookedBorscht</li>
+						<li>VCE_BorschtRecipe</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-						<ItemProcessor.CombinationDef>
+						<PipeSystem.ProcessDef>
 							<defName>VCE_BorschtRecipe</defName>
-							<building>VCE_ElectricPot</building>
-							<items>
-								<li>VCE_UncookedBorscht</li>
-							</items>
-							<amount>
-								<li>1</li>
-							</amount>
-							<result>VCE_Borscht</result>
-							<yield>10</yield>
-							<useQualityIncreasing>false</useQualityIncreasing>
-							<singleTimeIfNotQualityIncreasing>2</singleTimeIfNotQualityIncreasing>
-						</ItemProcessor.CombinationDef>
+							<label>Cook Festive Borscht</label>
+							<description>Turns an uncooked borscht into 10 cooked festive borschts.</description>
+							<spawnOnInteractionCell>true</spawnOnInteractionCell>
+							<autoExtract>false</autoExtract>
+							<useIngredients>true</useIngredients>
+							<transfersIngredientList>true</transfersIngredientList>
+							<priorityInBillList>4</priorityInBillList>
+							<ingredients>
+								<li>
+									<thing>VCE_UncookedBorscht</thing>
+									<countNeeded>1</countNeeded>
+								</li>
+							</ingredients>
+							<ticks>120000</ticks>
+							<results>
+								<li>
+									<thing>VCE_Borscht</thing>
+									<count>10</count>
+								</li>
+							</results>
+							<noPowerDestroysProgress>true</noPowerDestroysProgress>
+							<noPowerDestroysMessage>VCE_SoupFailurePower</noPowerDestroysMessage>
+							<noPowerDestroysInitialWarning>VCE_SoupFailurePowerWarning</noPowerDestroysInitialWarning>
+							<rareTicksToDestroy>10</rareTicksToDestroy>
+							<destroyIngredientsOnStart>true</destroyIngredientsOnStart>
+						</PipeSystem.ProcessDef>
 					</value>
 				</li>
 			</operations>
