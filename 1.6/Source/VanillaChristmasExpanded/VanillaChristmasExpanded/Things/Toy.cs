@@ -26,7 +26,7 @@ namespace VanillaChristmasExpanded
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            cachedQuality = this.TryGetComp<CompQuality>().Quality;
+            cachedQuality = compQuality.Quality;
         }
 
         public override string DescriptionFlavor => DescriptionDetailed;
@@ -39,10 +39,10 @@ namespace VanillaChristmasExpanded
         
         }
 
-        protected override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
-            if (this.IsHashIntervalTick(60000))
+            base.TickInterval(delta);
+            if (this.IsHashIntervalTick(GenDate.TicksPerDay, delta))
             {
                 Pawn pawn = (this.ParentHolder as Pawn_InventoryTracker)?.pawn;
 

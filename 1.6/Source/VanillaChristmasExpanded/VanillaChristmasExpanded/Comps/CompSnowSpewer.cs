@@ -13,7 +13,7 @@ namespace VanillaChristmasExpanded
         public bool active = false;
         public SnowSpewer_SteamSprayer sprayer;
 
-        new public CompProperties_SnowSpewer Props => (CompProperties_SnowSpewer)props;
+        public CompProperties_SnowSpewer Props => (CompProperties_SnowSpewer)props;
 
 
 

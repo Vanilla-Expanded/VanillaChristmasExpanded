@@ -15,8 +15,7 @@ namespace VanillaChristmasExpanded
 
 
 
-        public int tickCounter = 0;
-        public int tickInterval = 2500;
+        public int tickInterval = GenDate.TicksPerHour;
         private const float MeltPerIntervalPer10Degrees = 1.5f;
 
 
@@ -28,8 +27,7 @@ namespace VanillaChristmasExpanded
         public override void MapComponentTick()
         {
 
-            tickCounter++;
-            if ((tickCounter > tickInterval))
+            if (map.IsHashIntervalTick(tickInterval))
             {
 
                 List<Thing> colonyThings = this.map.listerThings.AllThings.Where(x => x.def == InternalDefOf.VCE_SnowSculpture || x.def== InternalDefOf.VCE_Snow|| x.Stuff == InternalDefOf.VCE_Snow).ToList();
@@ -65,8 +63,6 @@ namespace VanillaChristmasExpanded
 
 
 
-
-                tickCounter = 0;
             }
 
 

@@ -14,7 +14,6 @@ namespace VanillaChristmasExpanded
     public class GrandFestiveTree : Building
     {
 
-        public CompQuality compQuality;
         public CompPowerTrader compPower;
         public Graphic_Single cachedGraphic = null;
         public GraphicsByQualityExtension cachedGraphicsExtension;
@@ -35,11 +34,11 @@ namespace VanillaChristmasExpanded
 
         }
 
-        protected override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
+            base.TickInterval(delta);
 
-            if(!onDayCounter&&this.Map!=null&& this.IsHashIntervalTick(60) && compPower?.PowerOn == true)
+            if(!onDayCounter&&this.Map!=null&& this.IsHashIntervalTick(60, delta) && compPower is not { PowerOn: not true })
             {
                 if (GenLocalDate.HourOfDay(this.Map) == 0)
                 {
@@ -49,13 +48,15 @@ namespace VanillaChristmasExpanded
                         FestiveFavorManager.Instance.AddFestiveFavor(FestiveFavorByQuality(compQuality.Quality));
                         onDayCounter = true;
                     }
-                }              
+                }
 
             }
             if (onDayCounter)
             {
-                tickCounter++;
-                if (tickCounter > 60000)
+                tickCounter += delta;
+                // Allow for 15 ticks less due to tick interval.
+                // Not that it matters much, as the effect cannot trigger unless it's midnight
+                if (tickCounter > GenDate.TicksPerDay - 15)
                 {
                     tickCounter = 0;
                     onDayCounter = false;
@@ -93,7 +94,6 @@ namespace VanillaChristmasExpanded
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            compQuality = this.TryGetComp<CompQuality>();
             compPower = this.TryGetComp<CompPowerTrader>();
             cachedGraphicsExtension = this.def.GetModExtension<GraphicsByQualityExtension>();
             if (cachedGraphicsExtension != null)
@@ -109,7 +109,7 @@ namespace VanillaChristmasExpanded
 
             if (cachedGraphicPath == "")
             {
-                cachedGraphicPath = cachedGraphicsExtension.graphics.Where(x => x.quality == quality).First().texturePaths.First();
+                cachedGraphicPath = cachedGraphicsExtension.graphics.First(x => x.quality == quality).texturePaths.First();
             }
             cachedGraphic = (Graphic_Single)GraphicDatabase.Get<Graphic_Single>(cachedGraphicPath, ShaderDatabase.Cutout,
                      this.def.graphicData.drawSize, Color.white);
@@ -153,7 +153,7 @@ namespace VanillaChristmasExpanded
                 {
                     cachedGraphicIndex = 0;
                 }
-                cachedGraphicPath = cachedGraphicsExtension.graphics.Where(x => x.quality == compQuality.Quality).First().texturePaths.ElementAt(cachedGraphicIndex);
+                cachedGraphicPath = cachedGraphicsExtension.graphics.First(x => x.quality == compQuality.Quality).texturePaths.ElementAt(cachedGraphicIndex);
 
                 cachedGraphic = (Graphic_Single)GraphicDatabase.Get<Graphic_Single>(cachedGraphicPath, ShaderDatabase.Cutout,
                          this.def.graphicData.drawSize, Color.white);

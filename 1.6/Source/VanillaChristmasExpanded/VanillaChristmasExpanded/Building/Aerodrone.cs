@@ -22,13 +22,13 @@ namespace VanillaChristmasExpanded
 				var amount = presentsToEject.RandomInRange;
 				for (int i = 0; i < amount; i++)
 				{
-					IntVec3 randomCell = GenAdj.OccupiedRect(this).RandomCell;
+					IntVec3 randomCell = this.OccupiedRect().RandomCell;
 					if (RCellFinder.TryFindRandomCellNearWith(Position, (IntVec3 c) => !c.Fogged(Map) && c.Walkable(Map) && !c.Impassable(Map), Map, out IntVec3 result, 13, 60))
 					{
 						var projectile = (Projectile_SpawnPresent)GenSpawn.Spawn(InternalDefOf.VCE_FestivePresentProjectile, randomCell, Map);
 						projectile.present = (FestivePresent)ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent);
 						QualityCategory qualityPresent = QualityUtility.GenerateQualityRandomEqualChance();
-						projectile.present.TryGetComp<CompQuality>().SetQuality(qualityPresent, null);
+						projectile.present.compQuality.SetQuality(qualityPresent, null);
 						projectile.Launch(this, result, result, ProjectileHitFlags.None, false, null);
 					}
 				}
@@ -42,13 +42,13 @@ namespace VanillaChristmasExpanded
 			Scribe_Values.Look(ref ticksSinceSpawn, "ticksSinceSpawn", 0);
 		}
 
-        protected override void Tick()
+		protected override void TickInterval(int delta)
 		{
-			base.Tick();
+			base.TickInterval(delta);
 			if (Spawned)
 			{
-				ticksSinceSpawn++;
-				if (Find.TickManager.TicksGame % 60 == 0)
+				ticksSinceSpawn += delta;
+				if (this.IsHashIntervalTick(60, delta))
 				{
 					SpreadSnow();
 				}

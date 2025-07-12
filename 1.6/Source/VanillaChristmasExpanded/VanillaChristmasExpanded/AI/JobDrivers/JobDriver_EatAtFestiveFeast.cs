@@ -21,17 +21,17 @@ namespace VanillaChristmasExpanded
            
                 this.EndOnDespawnedOrNull(TargetIndex.A);
                 yield return Toils_Goto.Goto(TargetIndex.B, PathEndMode.OnCell);
-                float totalBuildingNutrition = 12;
-                Toil eat = ToilMaker.MakeToil("MakeNewToils");
-                eat.tickAction = delegate
+                const float totalBuildingNutrition = 12;
+                Toil eat = ToilMaker.MakeToil();
+                eat.tickIntervalAction = delegate(int delta)
                 {
                     pawn.rotationTracker.FaceCell(base.TargetA.Thing.OccupiedRect().ClosestCellTo(pawn.Position));
-                    pawn.GainComfortFromCellIfPossible(1);
+                    pawn.GainComfortFromCellIfPossible(delta);
                     if (pawn.needs.food != null)
                     {
-                        pawn.needs.food.CurLevel += totalBuildingNutrition / (float)pawn.GetLord().ownedPawns.Count / (float)eat.defaultDuration;
+                        pawn.needs.food.CurLevel += totalBuildingNutrition * delta / pawn.GetLord().ownedPawns.Count / eat.defaultDuration;
                     }
-                    if (pawn.IsHashIntervalTick(40) && Rand.Value < 0.1f)
+                    if (pawn.IsHashIntervalTick(40, delta) && Rand.Value < 0.1f)
                     {
                         IntVec3 c = Rand.Bool ? pawn.Position : pawn.RandomAdjacentCellCardinal();
                         if (c.InBounds(pawn.Map))

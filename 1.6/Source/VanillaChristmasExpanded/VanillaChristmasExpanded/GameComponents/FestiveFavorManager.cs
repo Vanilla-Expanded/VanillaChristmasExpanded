@@ -262,10 +262,9 @@ namespace VanillaChristmasExpanded
 
 		private void SpawnPresent(Map map, QualityCategory quality)
 		{
-			Thing present = ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent);
+			ThingWithComps present = (ThingWithComps)ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent);
 			present.SetFaction(Faction.OfPlayer);
-			CompQuality comp = present.TryGetComp<CompQuality>();
-			comp.SetQuality(quality, ArtGenerationContext.Colony);
+			present.compQuality.SetQuality(quality, ArtGenerationContext.Colony);
 			IntVec3 spawnLoc = GetSpawnLocation(map);
 			GenSpawn.Spawn(present, spawnLoc, map);
 			Utils.PopUpConfetti(present.Position, present.Map, false);

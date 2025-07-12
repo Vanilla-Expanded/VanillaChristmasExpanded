@@ -14,7 +14,7 @@ namespace VanillaChristmasExpanded
       
         public SnowSpewer_SteamSprayer sprayer;
 
-        new public CompProperties_SnowSpewerConditionCauser Props => (CompProperties_SnowSpewerConditionCauser)props;
+        public CompProperties_SnowSpewerConditionCauser Props => (CompProperties_SnowSpewerConditionCauser)props;
 
 
 

@@ -13,15 +13,11 @@ namespace VanillaChristmasExpanded
 {
     public class MilkAndCookies : ThingWithComps
     {
-
-
-
-
-        protected override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
+            base.TickInterval(delta);
 
-            if (this.IsHashIntervalTick(1800) && this.Map != null)
+            if (this.IsHashIntervalTick(1800, delta) && this.Map != null)
             {
 
                 if (Utils.IsDecembary(Tile))

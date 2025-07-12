@@ -14,8 +14,6 @@ namespace VanillaChristmasExpanded
     public class SnowSculpture : Building
     {
 
-        public CompQuality compQuality;
-
         public Graphic_Single cachedGraphic = null;
         public GraphicsByQualityExtension cachedGraphicsExtension;
         public string cachedGraphicPath = "";
@@ -28,11 +26,11 @@ namespace VanillaChristmasExpanded
 
         }
 
-        protected override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
+            base.TickInterval(delta);
 
-            if (this.IsHashIntervalTick(60000))
+            if (this.IsHashIntervalTick(60000, delta))
             {
                 FestiveFavorManager.Instance.AddFestiveFavor(FestiveFavorByQuality(compQuality.Quality));
             }
@@ -41,34 +39,18 @@ namespace VanillaChristmasExpanded
 
         public int FestiveFavorByQuality(QualityCategory quality)
         {
-            switch (quality)
+            return quality switch
             {
-
-                case QualityCategory.Awful:
-                    return 1;
-                case QualityCategory.Poor:
-                    return 1;
-                case QualityCategory.Normal:
-                    return 2;
-                case QualityCategory.Good:
-                    return 2;
-                case QualityCategory.Excellent:
-                    return 3;
-                case QualityCategory.Masterwork:
-                    return 4;
-                case QualityCategory.Legendary:
-                    return 5;
-
-            }
-            return 1;
-
-
+                QualityCategory.Normal or QualityCategory.Good => 2,
+                QualityCategory.Excellent => 3,
+                QualityCategory.Masterwork => 4,
+                QualityCategory.Legendary => 5,
+                _ => 1 // Awful/poor/incorrect value
+            };
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            compQuality = this.TryGetComp<CompQuality>();
-
             cachedGraphicsExtension = this.def.GetModExtension<GraphicsByQualityExtension>();
             if (cachedGraphicsExtension != null)
             {
@@ -83,7 +65,7 @@ namespace VanillaChristmasExpanded
 
             if (cachedGraphicPath == "")
             {
-                cachedGraphicPath = cachedGraphicsExtension.graphics.Where(x => x.quality == quality).First().texturePaths.First();
+                cachedGraphicPath = cachedGraphicsExtension.graphics.First(x => x.quality == quality).texturePaths.First();
             }
             cachedGraphic = (Graphic_Single)GraphicDatabase.Get<Graphic_Single>(cachedGraphicPath, ShaderDatabase.Cutout,
                      this.def.graphicData.drawSize, Color.white);

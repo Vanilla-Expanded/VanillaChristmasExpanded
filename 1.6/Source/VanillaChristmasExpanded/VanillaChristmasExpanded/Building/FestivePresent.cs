@@ -14,7 +14,6 @@ namespace VanillaChristmasExpanded
 	public class FestivePresent : Building, IOpenable
 	{
 
-		public CompQuality compQuality;
 		public Graphic_Single cachedGraphic = null;
 		public GraphicsByQualityExtension cachedGraphicsExtension;
 		public string cachedGraphicPath="";
@@ -46,7 +45,6 @@ namespace VanillaChristmasExpanded
 
 		public override void SpawnSetup(Map map, bool respawningAfterLoad)
 		{
-			compQuality = this.TryGetComp<CompQuality>();
 			cachedGraphicsExtension = this.def.GetModExtension<GraphicsByQualityExtension>();
 			if (cachedGraphicsExtension != null)
 			{
@@ -57,6 +55,7 @@ namespace VanillaChristmasExpanded
 
 		public void StoreGraphics()
 		{
+			// Shouldn't be needed? Since vanilla handles caches the quality now. But may be extra safe here.
 			if (compQuality is null)
 			{
 				compQuality = this.TryGetComp<CompQuality>();
@@ -65,7 +64,7 @@ namespace VanillaChristmasExpanded
 
 			if (cachedGraphicPath == "")
 			{
-				cachedGraphicPath = cachedGraphicsExtension.graphics.Where(x => x.quality == quality).First().texturePaths.RandomElement();
+				cachedGraphicPath = cachedGraphicsExtension.graphics.First(x => x.quality == quality).texturePaths.RandomElement();
 			}
 			cachedGraphic = (Graphic_Single)GraphicDatabase.Get<Graphic_Single>(cachedGraphicPath, ShaderDatabase.Cutout,
 					 this.def.graphicData.drawSize, Color.white);
@@ -172,7 +171,7 @@ namespace VanillaChristmasExpanded
 
 		public virtual void Open()
 		{
-			QualityCategory quality = this.GetComp<CompQuality>().Quality;
+			QualityCategory quality = compQuality.Quality;
 			ThingSetMakerParams parms = default(ThingSetMakerParams);
 			float price = PriceByQuality(quality);
 			parms.totalMarketValueRange = new FloatRange(price*0.9f,price);

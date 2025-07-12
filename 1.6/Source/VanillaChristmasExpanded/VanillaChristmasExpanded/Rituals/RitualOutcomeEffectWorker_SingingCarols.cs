@@ -69,10 +69,10 @@ namespace VanillaChristmasExpanded
                     InternalDefOf.VCE_ConfettiExplosion.PlayOneShotOnCamera();
                     foreach (Pawn pawn in totalPresence.Keys)
                     {
-                        Thing thingToMake = GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent), pawn.PositionHeld, pawn.Map);
+                        ThingWithComps thingToMake = (ThingWithComps)GenSpawn.Spawn(ThingMaker.MakeThing(InternalDefOf.VCE_FestivePresent), pawn.PositionHeld, pawn.Map);
                         thingToMake.SetFaction(pawn.Faction);
                         QualityCategory qualityPresent = QualityUtility.GenerateQualityRandomEqualChance();
-                        thingToMake.TryGetComp<CompQuality>().SetQuality(qualityPresent, null);
+                        thingToMake.compQuality.SetQuality(qualityPresent, null);
                         Utils.PopUpConfetti(pawn.Position, pawn.Map, false);
                     }
                 }
