@@ -15,7 +15,7 @@ namespace VanillaChristmasExpanded
         public static void Postfix(JobDriver __instance)
         {
 
-            if (__instance is JobDriver_ClearSnowAndSand)
+            if (__instance is JobDriver_ClearSnowAndSand && !IsSand(__instance,__instance.job.targetA.Cell))
             {
 
                 Thing thing = ThingMaker.MakeThing(InternalDefOf.VCE_Snow);
@@ -25,6 +25,16 @@ namespace VanillaChristmasExpanded
             }
 
 
+        }
+
+        private static bool IsSand(JobDriver instance,IntVec3 cell)
+        {
+            float? num = instance.pawn?.MapHeld?.sandGrid?.GetDepth(cell);
+            if (num.HasValue)
+            {
+                return num.GetValueOrDefault() > instance.pawn?.MapHeld?.snowGrid.GetDepth(cell);
+            }
+            return false;
         }
     }
 }
